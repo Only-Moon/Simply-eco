@@ -7,6 +7,7 @@
   
 </p>
 
+
 > **Simply Eco is a powerful module that allows you to create economy system in your bot with ease.:)**
 
 ## **Installation** 
@@ -23,6 +24,7 @@ const eco = new economy("YOUR MONGODB URI")
 
 eco.<Method>(<Options>); //return -> Promise ->
 ```
+
 
 ## With Customization 
 ```js
