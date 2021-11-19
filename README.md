@@ -1,7 +1,7 @@
 <h2 style="font-size:6.5rem; color:#F4B3CA" align="center"> Simply Eco </h2>
 <p align="center"><img align="center" style="width:0.5px" src="https://i.imgur.com/DWeejI6.jpg"/></p><br/>
 <p align="center">
-  <img alt="npm" src="https://img.shields.io/npm/dt/xx-mohit-xx/simply-eco">
+  <img alt="npm" src="https://img.shields.io/npm/dt/xx-mohit-xxx/simply-eco">
   <a href="https://discord.gg/HNfhvCeR6d"><img src="https://badgen.net/discord/online-members/HNfhvCeR6d" alt="Discord"></a>
   <a href='https://ko-fi.com/Yash094' target='_blank'><img height='35' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee />
   
