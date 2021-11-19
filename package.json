@@ -1,0 +1,43 @@
+{
+  "name": "simply-eco",
+  "version": "0.0.5",
+  "description": "A powerful module that allows you to create economy system in your bot with ease.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xx-Mohit-xX",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "discord.js": "^13.3.1",
+    "mongoose": "^5.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Xx-Mohit-xX/simply-eco.git"
+  },
+  "homepage": "https://github.com/Xx-Mohit-xX/simply-eco",
+  "keywords": [
+    "simply-eco",
+    "simplyeco",
+    "mongo-eco.js",
+    "economy-mongo",
+    "eco",
+    "economy",
+    "simply-eco"
+  ],
+  "devDsimplyencies": {
+    "eslint": "^6.8.0",
+    "node": "^17.1.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "bugs": {
+    "url": "https://github.com/Xx-Mohit-xX/mongo-eco/issues"
+  },
+  "devDependencies": {
+    "node": "^17.1.0"
+  }
+}

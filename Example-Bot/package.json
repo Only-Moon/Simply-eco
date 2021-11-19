@@ -1,0 +1,22 @@
+{
+    "name": "test-bot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js", // npx node index.js for replit
+        "test": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^13.2.0",
+        "glob": "^7.1.7",
+        "mongoose": "^6.0.2",
+        "simply-eco": "^0.0.5"
+    },
+    "devDsimplyencies": {
+    "node": "^17.1.0"
+  },
+}
