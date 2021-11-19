@@ -1,9 +1,12 @@
 <h2 style="font-size:6.5rem; color:#F4B3CA" align="center"> Simply Eco </h2>
 <p align="center"><img align="center" style="width:0.5px" src="https://i.imgur.com/DWeejI6.jpg"/></p><br/>
 <p align="center">
-  <img alt="npm" src="https://img.shields.io/npm/dt/xx-mohit-xxx/simply-eco">
-  <a href="https://discord.gg/HNfhvCeR6d"><img src="https://badgen.net/discord/online-members/HNfhvCeR6d" alt="Discord"></a>
+  <a href="https://www.npmjs.com/package/simply-eco"><img src="https://img.shields.io/npm/v/simply-eco.svg?style=flat-square" /></a>
+ <a href="https://www.npmjs.com/package/simply-eco"><img src="https://img.shields.io/npm/dt/simply-eco?style=flat-square" /></a><br>
+   <a href="https://www.npmjs.com/package/simply-eco"><img src="https://nodei.co/npm/simply-eco.png?downloadRank=true&downloads=true&downloadRank=true&stars=true" /></a><br>
+  <a href="https://discord.gg/HNfhvCeR6d"><img src="https://invidget.switchblade.xyz/HNfhvCeR6d" alt="Discord"></a>
 </p>
+
 
 > **Simply Eco is a powerful module that allows you to create economy system in your bot with ease.:)**
 
