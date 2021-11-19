@@ -1,6 +1,6 @@
 {
   "name": "simply-eco",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A powerful module that allows you to create economy system in your bot with ease.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/Xx-Mohit-xX/simply-eco",
   "keywords": [
-    "simply-eco",
     "simplyeco",
     "mongo-eco.js",
     "economy-mongo",
