@@ -35,7 +35,7 @@ notify: false
 // use the methods
 eco.<Method>(<Options>); //returns -> Promise -> 
 ```
-# Options
+## Options
 
 - **📌 notify** `(Boolean)` - Notifies when SimplyEco is connected
 
