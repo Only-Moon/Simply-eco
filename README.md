@@ -22,7 +22,7 @@ npm install simply-eco
 //Import package
 const economy = require("simply-eco");
 //create new economy() Class
-const eco = new economy("YOUR MONGODB URI")
+const eco = new economy.eco("YOUR MONGODB URI")
 
 eco.<Method>(<Options>); //return -> Promise ->
 ```
@@ -31,7 +31,7 @@ eco.<Method>(<Options>); //return -> Promise ->
 ## With Customization 
 
 ```js
-const eco = new economy('YOUR MONGODB URI', {
+const eco = new economy.eco('YOUR MONGODB URI', {
 notify: false
 });
 
