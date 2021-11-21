@@ -4,3 +4,4 @@ package-lock.json
 .npmignore
 lib/items.jsi
 .npmignore
+docs/

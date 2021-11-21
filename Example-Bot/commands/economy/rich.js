@@ -20,8 +20,8 @@ module.exports = {
       (x, i) => 
 `${emojis[i] || "🔹"} ${x.wallet + x.bank} - ${client.users.cache.find(user => user.id === x.userID)}`
     )
-
-    embed.setDescription(`${data.join("\n")}`)
+    
+embed.setDescription(`${data.join("\n")}`)
     
     message.channel.send({embeds: [ embed ] })
   }

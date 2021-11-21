@@ -5,7 +5,7 @@ const eco = require("./lib/eco");
   * @paran {boolean} options.notify
   * returns {Economy Class}
  */
-function SimplyEco(token, options = []) {
+function SimplyEco(token, options = {}) {
     return new eco(token, options);
 }
 //add Options to it

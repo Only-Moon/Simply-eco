@@ -45,5 +45,5 @@ module.exports = async (client) => {
 
 g.commands.set(arrayOfSlashCommands)
 })
-  
+          }) 
 };

@@ -13,7 +13,7 @@ module.exports = {
       message.channel.send("MENTION A USER TO TRANSFER THE MONEY")
     }
     let data = await client.eco.Transfer(message.guild.id, message.author.id, user.id, args[1])
-    if(data === 'NOT_ENOUGnH_CASH') {
+    if(data === 'NOT_ENOUGH_CASH') {
       return message.channel.send(`${user} You Don't Have Enough Cash`)
     }
     message.channel.send(`TRANSFERED THE MONEY TO ${user.tag}'s Acc'`)

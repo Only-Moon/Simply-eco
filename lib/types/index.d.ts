@@ -45,13 +45,14 @@ declare module "simply-eco" {
         public GetBankBal(UserID: string, GuildID: string): Promise<bankWallet>;
         public AddMoney(UserID: string, GuildID: string, Amt: number): Promise<wallet>;
         public RemoveMoney(UserID: string, GuildID: string, Amt: number): Promise<wallet>;
-        public Rich(GuildID: string): Promise<"NO_RICH_PEOPLE" | any[]>;
-        public getProfile(GuildID: string, UserID: string): Promise<Profile[]>;
-        public Deposit(UserID: string, GuildID: string, Amt: number | "all" | "max"): Promise<'CASH_IN_WALLET' | 'NO_CASH_IN_WALLET' | { wallet: wallet, Bank: bankWallet }>;
-        public Withdraw(UserID: string, GuildID: string, Amt: number | "all" | "max"): Promise<'CASH_IN_BANK' | { wallet: wallet, Bank: bankWallet }>;
+        public GetRich(GuildID: string): Promise<"NO_RICH_PEOPLE" | any[]>;
+        public GetProfile(GuildID: string, UserID: string): Promise<Profile[]>;
+        public Deposit(UserID: string, GuildID: string, Amt: number | "max"): Promise<'CASH_IN_WALLET' | 'NO_CASH_IN_WALLET' | { wallet: wallet, Bank: bankWallet }>;
+        public Withdraw(UserID: string, GuildID: string, Amt: number | "max"): Promise<'CASH_IN_BANK' | { wallet: wallet, Bank: bankWallet }>;
         public GetShop(GuildID: string): Promise<any[] | []>;
-        public removeJob(guildId: string, userId: string): Promise<Document<any, any, any> | "SUCCESS">;
-        public setJob(userId: string, guildId: string, Job: string): Promise<'ALREADY_WORKING' | 'SUCCESS' | job[]>;
+        public ReassignJob(userId: string, guildId: string, Job: string): Promise<'NOT_WORKING' | 'SUCCESS' | job[]>;      
+        public RemoveJob(guildId: string, userId: string): Promise<Document<any, any, any> | "SUCCESS">;
+        public SetJob(userId: string, guildId: string, Job: string): Promise<'ALREADY_WORKING' | 'SUCCESS' | job[]>;
         public Work(UserID: string, GuildID: string): Promise<wallet | {wallet: wallet, timeout: string, job: string, money: number}>;
         private msToTime(duration: number): string;
     }

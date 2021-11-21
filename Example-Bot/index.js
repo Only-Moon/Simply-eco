@@ -5,8 +5,8 @@ const client = new Client({
 });
 module.exports = client;
 
-const SimplyEco = require('simply-eco');
-client.eco = new SimplyEco(process.env['mongo_url']);
+const economy = require('../index');
+client.eco = new economy.eco(process.env['mongo_url']);
 
 // Global Variables
 client.commands = new Collection();

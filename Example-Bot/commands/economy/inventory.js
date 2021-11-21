@@ -15,9 +15,7 @@ module.exports = {
       .setFooter(' 👍 ')
       .setTimestamp()
 
-   console.log(data)
     data.forEach(item => {
-      console.log(item)
       embed.addField(`${item.Name}`, `Selling Price - ${item.Sell}`)
     })
 

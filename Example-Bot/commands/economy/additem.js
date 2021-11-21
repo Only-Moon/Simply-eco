@@ -13,7 +13,7 @@ module.exports = {
         `You dont have Permission to use this Command`
       );
     var user = message.mentions.users.first() || message.author;
-    console.log(args)
+
     let data = await client.eco.AddItem(message.guild.id, args[0], args[1], args[2])
 
     message.channel.send({embeds: [new MessageEmbed()
