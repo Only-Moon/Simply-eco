@@ -9,7 +9,7 @@ module.exports = {
   description: "Gives you your server lb",
   run: async (client, message, args) => {
     var user = message.mentions.users.first() || message.author;
-    let data = await client.eco.Rich(message.guild.id)
+    let data = await client.eco.GetRich(message.guild.id)
     let embed = new MessageEmbed()
       .setTitle(`${message.guild.name}'s Leaderboard`)
       .setFooter(' 👍 ')
