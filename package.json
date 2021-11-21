@@ -1,7 +1,7 @@
 {
   "name": "simply-eco",
   "types": "./lib/types/index.d.ts",
-  "version": "0.0.7",
+  "version": "0.0.75",
   "description": "A powerful module that allows you to create economy system in your bot with ease.",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,6 @@
   "author": "Xx-Mohit-xX",
   "license": "GPL-3.0",
   "dependencies": {
-    "discord.js": "^13.3.1",
-    "glob": "^7.2.0",
     "mongoose": "^5.13.2"
   },
   "repository": {

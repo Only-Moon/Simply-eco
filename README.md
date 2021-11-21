@@ -22,26 +22,33 @@ npm install simply-eco
 //Import package
 const economy = require("simply-eco");
 //create new economy() Class
-const eco = new economy.eco("YOUR MONGODB URI")
+client.eco = new economy.eco("YOUR MONGODB URI")
 
 eco.<Method>(<Options>); //return -> Promise ->
 ```
 
-
 ## With Customization 
 
 ```js
-const eco = new economy.eco('YOUR MONGODB URI', {
+//Import package
+const economy = require("simply-eco");
+//create new economy() Class
+
+client.eco = new economy.eco('YOUR MONGODB URI', {
 notify: false
 });
 
 // use the methods
 eco.<Method>(<Options>); //returns -> Promise -> 
 ```
-
 # Options
 
 - **📌 notify** `(Boolean)` - Notifies when SimplyEco is connected
+
+
+
+## All Methods 
+- Methods: [LINK](https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/docs)
 
 ## Features
 
@@ -54,11 +61,11 @@ eco.<Method>(<Options>); //returns -> Promise ->
 
 ## LINKS
 
-- 📃 Example Bot: [Link](https://github.com/Xx-Mohit-xX/Simply-eco/tree/main/Example-Bot)
+- 📃 Example Bot: [Link](https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/Example-Bot)
 - 📃 Discord: [Server](https://discord.com/invite/HNfhvCeR6d)
 
 
 ## Credits
 
-- Modified by: [@Xx-Mohit-xX](https://github.com/Xx-Mohit-xX)
-- Made by: [@Yash094](https://github.com/Yash094)
+- Final Form by: [@Xx-Mohit-xX](https://github.com/Xx-Mohit-xX)
+- Base by: [@Yash094](https://github.com/Yash094)
