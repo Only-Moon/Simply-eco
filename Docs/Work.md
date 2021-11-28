@@ -30,10 +30,10 @@ let data = await client.eco.Work(user.id, message.guild.id)
 
 ```js
 {
-  wallet: user.wallet,
-  timeout: time untill next use(1 min),
-  job: user.job,
-  money: amt earned by working
+  wallet: user wallet,
+  timeout: time untill next use(2 hrs),
+  job: user job,
+  salary: user salary
 }
 ```
 

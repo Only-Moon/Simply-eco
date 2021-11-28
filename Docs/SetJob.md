@@ -22,7 +22,8 @@ let data = await client.eco.SetJob(user.id, message.guild.id, job)
 ```js
 [
  {
-   Job: job name
+   Name: job name,
+   Salary: job salary
  }
 ]
 ```

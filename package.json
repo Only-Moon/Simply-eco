@@ -1,7 +1,7 @@
 {
   "name": "simply-eco",
   "types": "./lib/types/index.d.ts",
-  "version": "0.0.8",
+  "version": "0.0.85",
   "description": "A powerful module that allows you to create economy system in your bot with ease.",
   "main": "index.js",
   "scripts": {
