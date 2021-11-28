@@ -11,6 +11,8 @@
   "author": "Xx-Mohit-xX",
   "license": "GPL-3.0",
   "dependencies": {
+    "discord.js": "^13.3.1",
+    "glob": "^7.2.0",
     "husky": "^7.0.4",
     "mongoose": "^5.13.2"
   },
