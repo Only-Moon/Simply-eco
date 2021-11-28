@@ -6,6 +6,7 @@ const client = new Client({
 module.exports = client;
 
 const economy = require('../index');
+
 client.eco = new economy.eco(process.env['mongo_url']);
 
 // Global Variables

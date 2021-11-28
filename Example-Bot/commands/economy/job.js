@@ -17,6 +17,7 @@ module.exports = {
     switch (args[0].toLowerCase()) {
       case "assign":
         let data = await bot.eco.SetJob(user.id, message.guild.id, args[1])
+console.log(data)
         if (data === "ALREADY_WORKING") {
           message.channel.send(
             "Hey you already have a job instead of using assign use reassign!"
@@ -26,27 +27,30 @@ module.exports = {
             message.channel.send(`Your job is now ${args[1]}`);
           } else {
             const e = new MessageEmbed().setColor(`BLUE`);
-           data.forEach((job) => {
-              e.addField(`${job.Job}`, "|| ||");
+            
+           data.map((job) => {
+              e.addField(`Job: ${job.Name}`, `Salary: ${job.Salary}`);
+             
             });
             message.channel.send({embeds: [e]});
           }
-        }
+          }
         break;
       case "re-assign":
       case "reassign":
       let data2 = await bot.eco.ReassignJob(user.id, message.guild.id, args[1])
-        console.log(data2)
+
         if (data2 === "SUCCESS") {
           message.channel.send(
             `You have re-assigned, your job is now ${args[1]}`
           );
         } else {
           const e = new MessageEmbed().setColor(`BLUE`);
-          let data2 = await bot.eco.SetJob(user.id, message.guild.id, args[1])
-          data2.forEach((Job) => {
-            e.addField(`${Job}`, "|| ||");
-          });
+
+           data2.map((job) => {
+              e.addField(`Job: ${job.Name}`, `Salary: ${job.Salary}`);
+             
+            });
           message.channel.send({embeds: 
 [e] });
         }

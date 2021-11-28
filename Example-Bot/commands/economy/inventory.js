@@ -10,6 +10,10 @@ module.exports = {
   run: async (client, message, args) => {
     var user = message.mentions.users.first() || message.author;
     let data = await client.eco.GetInv(user.id, message.guild.id)
+
+if (data === "NO_ITEM_IN_INVENTORY") return message.reply("no item")
+    
+
     let embed = new MessageEmbed()
       .setTitle(`${message.author.username}'s Inv'`)
       .setFooter(' 👍 ')

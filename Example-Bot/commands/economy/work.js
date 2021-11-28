@@ -25,7 +25,7 @@ if (data.error === "ALREADY_WORKED") {
         const embed = new MessageEmbed()
           .setTitle("Work!")
           .setDescription(
-            `${user.username} worked as a **${data.job}** and earned **${data.money}**! 💰`
+            `${user.username} worked as a **${data.job}** and earned **${data.salary}**! 💰 \n You have ${data.wallet} in your wallet Now`
           )
           .setColor("BLUE");
 

@@ -1,22 +1,24 @@
 {
   "name": "simply-eco",
   "types": "./lib/types/index.d.ts",
-  "version": "0.0.75",
+  "version": "0.0.8",
   "description": "A powerful module that allows you to create economy system in your bot with ease.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "author": "Xx-Mohit-xX",
   "license": "GPL-3.0",
   "dependencies": {
+    "husky": "^7.0.4",
     "mongoose": "^5.13.2"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Xx-Mohit-xX/simply-eco.git"
+    "url": "git@github.com:Xx-Mohit-xX/Simply-eco.git"
   },
-  "homepage": "https://github.com/Xx-Mohit-xX/simply-eco",
+  "homepage": "https://github.com/Xx-Mohit-xX/Simply-eco",
   "keywords": [
     "simplyeco",
     "mongo-eco.js",
@@ -34,9 +36,11 @@
     "test": "test"
   },
   "bugs": {
-    "url": "https://github.com/Xx-Mohit-xX/mongo-eco/issues"
+    "url": "https://github.com/Xx-Mohit-xX/Simply-eco/issues"
   },
   "devDependencies": {
-    "node": "^17.1.0"
+    "node": "^17.1.0",
+    "pretty-quick": "^3.1.1",
+    "prettier": "^2.5.0"
   }
 }
