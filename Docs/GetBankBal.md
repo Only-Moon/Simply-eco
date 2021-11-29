@@ -1,11 +1,11 @@
-# GetBank
+# GetBankBal
 
 Get User's Bank Balance  | `GetBank`
 
 ### Usage
 
 ```js
-client.eco.GetBank(UserID, GuildID) 
+client.eco.GetBankBal(UserID, GuildID) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.GetBank(UserID, GuildID)
 
 let user = message.mentions.users.first || message.author
 
-let data = await client.eco.GetBank(user.id, message.guild.id) 
+let data = await client.eco.GetBankBal(user.id, message.guild.id) 
 ```
 
 - ## Returns `Bank`

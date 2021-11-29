@@ -19,17 +19,19 @@ npm install simply-eco
 ## Without Customization 
 
 ```js
+const client = <your Discord client>
 //Import package
 const economy = require("simply-eco");
 //create new economy() Class
 client.eco = new economy.eco("YOUR MONGODB URI")
 
-eco.<Method>(<Options>); //return -> Promise ->
+client.eco.<Method>(<Options>); //return -> Promise ->
 ```
 
 ## With Customization 
 
 ```js
+const client = <your Discord Client>
 //Import package
 const economy = require("simply-eco");
 //create new economy() Class
@@ -39,7 +41,7 @@ notify: false
 });
 
 // use the methods
-eco.<Method>(<Options>); //returns -> Promise -> 
+client.eco.<Method>(<Options>); //returns -> Promise -> 
 ```
 # Options
 
@@ -61,6 +63,7 @@ eco.<Method>(<Options>); //returns -> Promise ->
 
 ## LINKS
 
+- 📃 Docs: [Link](https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/docs)
 - 📃 Example Bot: [Link](https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/Example-Bot)
 - 📃 Discord: [Server](https://discord.com/invite/HNfhvCeR6d)
 

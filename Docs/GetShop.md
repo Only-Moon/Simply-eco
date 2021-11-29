@@ -18,10 +18,14 @@ client.eco.GetShop(GuildID)
       .setTitle(`SHOP`)
       .setFooter(' 👍 ')
       .setTimestamp()
-
+      
+    if (data === "NO_ITEM_IN_SHOP") {
+      embed.addField("No Item", "In This Guild's Shop")
+    } else {
     data.forEach(item => {
       embed.addField(`${item.Name}`, `Price: ${item.Price}\n ID: ${item.id}`)
     })
+  }
 ```
 
 - ## Return `<Array Of Objects>` - `User.shopItems` on success

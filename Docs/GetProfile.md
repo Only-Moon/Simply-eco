@@ -1,10 +1,17 @@
-const { MessageEmbed } = require('discord.js');
+# GetProfile
 
-module.exports = {
-	name: 'profile',
-	description: 'See the full profile of a user',
-	category: 'economy',
-	run: async (client, message, args) => {
+Get User' Profile | `GetProfile`
+
+### Usage
+
+```js
+client.eco.GetProfile(GuildID) 
+```
+
+### Example
+
+```js
+
 		const user = message.mentions.users.first() || message.author;
 		const userId = user.id;
 		const guildId = message.guild.id;
@@ -30,7 +37,23 @@ module.exports = {
 				.setFooter(user.username)
 				.setTimestamp();
 
-			message.channel.send({ embeds: [embed] });
-		});
-	}
-};
+```
+
+- ## Return `<Array of Objects>` on success
+ 
+```js
+[
+ { 
+ user: user id,
+ wallet: wallet bal,
+ job: user job,
+ bank: bank balance,
+ inventory: no. of item in user inventory,
+ salary: user salary
+}
+]
+```
+
+ - ### Options
+
+- no options ;(

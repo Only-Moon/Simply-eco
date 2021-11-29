@@ -24,7 +24,8 @@ let data = await client.eco.ReassignJob(user.id, message.guild.id, job)
 ```js
 [
  {
-   Job: job name
+   Name: job name,
+   Salary: user salary
  }
 ]
 ```
@@ -34,3 +35,4 @@ let data = await client.eco.ReassignJob(user.id, message.guild.id, job)
  - ### Options
 
 - no options ;(
+

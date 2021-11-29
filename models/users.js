@@ -35,6 +35,10 @@ const MemberData = new mongoose.Schema({
 		type: String,
 		default: null
 	},
+	salary: {
+		type: Number,
+		default: 0
+	},
 	lastUsedWork: {
 		type: Date
 	}
