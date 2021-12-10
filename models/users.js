@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 /**
- * @type {mongoose.Schema<{ userId: string, gid: string, wallet: number, bank: number, dailyAmt: number, lastUsedDaily:  date, lastUsedWekly: date, inventory: ({Name: string, Price:string, Sell: string, id: 0})[], job: string, lastUsedWork: date }>
+ * @type {mongoose.Schema<{ userId: string, gid: string, wallet: number, bank: number, dailyAmt: number, lastUsedDaily:  Date, lastUsedWekly: Date, inventory: ({Name: string, Price:string, Sell: string, id: 0})[], job: string, lastUsedWork: Date }>}
  */
 
 const MemberData = new mongoose.Schema({
