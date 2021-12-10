@@ -57,7 +57,7 @@ declare module "simply-eco" {
         public Deposit(UserID: string, GuildID: string, Amt: number | "max"): Promise<'CASH_IN_WALLET' | 'NO_CASH_IN_WALLET' | { wallet: wallet, Bank: bankWallet }>;
         public Withdraw(UserID: string, GuildID: string, Amt: number | "max"): Promise<'CASH_IN_BANK' | { wallet: wallet, Bank: bankWallet }>;
         public GetShop(GuildID: string): Promise<Item[] | []>;
-        public getItem(guildId: string, itemName: string | number): Promise<Item>
+        public GetItem(guildId: string, itemName: string | number): Promise<Item | null>
         public ReassignJob(userId: string, guildId: string, Job: string): Promise<'NOT_WORKING' | 'SUCCESS' | job[]>;
         public RemoveJob(guildId: string, userId: string): Promise<User | "SUCCESS">;
         public SetJob(userId: string, guildId: string, Job: string): Promise<'ALREADY_WORKING' | 'SUCCESS' | job[]>;
