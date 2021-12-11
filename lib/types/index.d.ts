@@ -4,7 +4,9 @@ declare module "simply-eco" {
     export type bankWallet = number | null;
     export type weeklyAmt = string | 10000;
     export type job = { Job: string };
-    export type Item = {Name: string, Price:string, Sell: string, id: 0};
+
+    export type Item = { Name: string, Price: string, Sell: string, id: 0 | number };
+
     export interface Profile {
         user: string,
         wallet: wallet,
@@ -55,10 +57,11 @@ declare module "simply-eco" {
         public Deposit(UserID: string, GuildID: string, Amt: number | "max"): Promise<'CASH_IN_WALLET' | 'NO_CASH_IN_WALLET' | { wallet: wallet, Bank: bankWallet }>;
         public Withdraw(UserID: string, GuildID: string, Amt: number | "max"): Promise<'CASH_IN_BANK' | { wallet: wallet, Bank: bankWallet }>;
         public GetShop(GuildID: string): Promise<Item[] | []>;
-        public ReassignJob(userId: string, guildId: string, Job: string): Promise<'NOT_WORKING' | 'SUCCESS' | job[]>;      
+        public GetItem(guildId: string, itemName: string | number): Promise<Item | null>
+        public ReassignJob(userId: string, guildId: string, Job: string): Promise<'NOT_WORKING' | 'SUCCESS' | job[]>;
         public RemoveJob(guildId: string, userId: string): Promise<User | "SUCCESS">;
         public SetJob(userId: string, guildId: string, Job: string): Promise<'ALREADY_WORKING' | 'SUCCESS' | job[]>;
-        public Work(UserID: string, GuildID: string): Promise<wallet | {wallet: wallet, timeout: string, job: string, money: number}>;
+        public Work(UserID: string, GuildID: string): Promise<wallet | { wallet: wallet, timeout: string, job: string, money: number }>;
         private msToTime(duration: number): string;
     }
 }
