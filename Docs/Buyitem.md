@@ -5,7 +5,7 @@ Buy item from shop. | `BuyItem`
 ### Usage
 
 ```js
-client.eco.BuyItem(UserId, GuildID, ItemName)
+client.eco.BuyItem(client, UserId, GuildID, ItemName)
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.BuyItem(UserId, GuildID, ItemName)
 
 let user = message.mentions.users.first || message.author
 
-let data = await client.eco.BuyItem(user.id, message.guild.id, Car)
+let data = await client.eco.BuyItem(client, user.id, message.guild.id, Car)
 ```
 
 ## Returns `false` // if no shop
@@ -26,3 +26,10 @@ let data = await client.eco.BuyItem(user.id, message.guild.id, Car)
 ### Options
 
 - **item[0]** - `{ item.Name, item.Price,  item.Sell, item.id }`
+
+### Global Shop
+
+```js
+client.eco.BuyItem(client, UserId, GuildId, ItemName, {
+ global: true
+}) 

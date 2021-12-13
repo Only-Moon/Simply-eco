@@ -5,14 +5,14 @@ Remove Item from shop. | `RemoveItem`
 ### Usage
 
 ```js
-client.eco.RemoveItem(GuildID, ItemId)
+client.eco.RemoveItem(client, GuildID, ItemName)
 ```
 
 ### Example
 
 ```js
 
-let data = await client.eco.RemoveItem(message.guild.id, 0)
+let data = await client.eco.RemoveItem(client, message.guild.id, car)
 ```
 
 - ## Returns `GuildData`
@@ -20,3 +20,11 @@ let data = await client.eco.RemoveItem(message.guild.id, 0)
 ### Options
 
 - no options ;(
+
+### Global Shop
+
+```js
+client.eco.RemoveItem(client, GuildID, ItemName, {
+ global: true
+})
+```

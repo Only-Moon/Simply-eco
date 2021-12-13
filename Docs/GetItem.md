@@ -1,11 +1,11 @@
-# getItem
+# GetItem
 
 Get item by name or id. 
 
 ### Usage
 
 ```js
-client.eco.getItem(GuildID, item) 
+client.eco.GetItem(client, GuildID, item) 
 ```
 
 ### Example
@@ -13,7 +13,7 @@ client.eco.getItem(GuildID, item)
 ```js
 
 
-let data = await client.eco.GetInv(message.guild.id, 0) 
+let data = await client.eco.GetItem(client, message.guild.id, 0) 
 
 let embed = new MessageEmbed()
   .setTitle(`Item "${data.Name}"`)
@@ -32,6 +32,14 @@ let embed = new MessageEmbed()
 
  - ## Returns `null` on error - if no item in inv
 
- - ### Options
+### Options
 
 - no options ;(
+
+### Global Shop
+
+```js
+client.eco.GetItem(client, GuildID, item, {
+  global: true
+}) 
+```
