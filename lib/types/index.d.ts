@@ -33,6 +33,7 @@ declare module "simply-eco" {
     }
     export interface optionsInterface {
         notify: boolean;
+        global: boolean;
     }
 
     export class eco {

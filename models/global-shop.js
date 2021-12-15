@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 /**
-  * @type {mongoose.Schema<{ Id: string, shopItems: ({Name: string, Price:string, Sell: string, id: 0})[]}>}
+  * @type {mongoose.Schema<{ Id: string | null, shopItems: {Name: string, Price:string, Sell: string, id: 0}[]} | []>}
 */ 
 
 
