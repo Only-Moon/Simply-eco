@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 */ 
 
 
-const GuildData = new mongoose.Schema({
+const GlobalShop = new mongoose.Schema({
 	Id: {
 		type: String,
 		default: null
@@ -16,3 +16,5 @@ const GuildData = new mongoose.Schema({
 	}
 
 });
+
+module.exports = mongoose.model('GlobalShop', GlobalShop);
