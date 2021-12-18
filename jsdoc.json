@@ -5,7 +5,8 @@
     "source": {
         "include": [
           "lib/",
-          "./README.md"
+          "./README.md",
+          ".index.js"
         ]
     },
     "plugins": [
@@ -29,14 +30,14 @@
       "openGraph": { 
         "title": "SimplyEco Docs",
         "type": "website",
-        "image": "https://i.imgur.com/DWeejI6.jpg",
+        "image": "https://i.imgur.com/DWeejI6.png",
         "site_name": "SimplyEco", 
-        "url": "https://Xx-Mohit-xX.github.io/simply-eco/"
+        "url": "https://simplyeco.js.org"
 
       }, 
       "meta": { 
         "title": "SimplyEco", 
-        "description": "A powerful module that allows you to create economy system in your bot with ease.",
+        "description": "Simply Eco is a powerful module that allows you to create economy system in your bot with ease.:)",
         "keyword": "simplyeco, mongo-eco.js, economy-mongo, eco, economy, simply-eco"
         }, 
       "search": true,
@@ -49,7 +50,13 @@
   "target":"_blank", 
   "class":"menu-item", 
   "id":"repository" 
-  } 
+  },
+  "Npm Info": {
+  "href":"https://www.npmjs.com/package/simply-eco",
+  "target":"_blank",
+  "class":"menu-item",
+  "id":"npm" 
+  }
 } 
 }
 }
