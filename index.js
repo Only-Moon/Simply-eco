@@ -2,7 +2,7 @@
 const eco = require("./lib/eco");
 /**
   * @param {string} token | Mongo URL string}
-  * @paran {boolean} options.notify
+  * @param {boolean} options.notify
   * returns {Economy Class}
  */
 function SimplyEco(token, options = {}) {

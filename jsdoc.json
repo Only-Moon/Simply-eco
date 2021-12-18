@@ -1,0 +1,55 @@
+{
+    "tags": {
+        "allowUnknownTags": false
+    },
+    "source": {
+        "include": [
+          "lib/",
+          "./README.md"
+        ]
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "opts": {
+        "template": "node_modules/docdash/",
+        "encoding": "utf8",
+        "destination": "docs/",
+        "recurse": true,
+        "verbose": true
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "docdash": { 
+        "static": true,
+        "sort": true, 
+        "disqus": "",
+      "openGraph": { 
+        "title": "SimplyEco Docs",
+        "type": "website",
+        "image": "https://i.imgur.com/DWeejI6.jpg",
+        "site_name": "SimplyEco", 
+        "url": "https://Xx-Mohit-xX.github.io/simply-eco/"
+
+      }, 
+      "meta": { 
+        "title": "SimplyEco", 
+        "description": "A powerful module that allows you to create economy system in your bot with ease.",
+        "keyword": "simplyeco, mongo-eco.js, economy-mongo, eco, economy, simply-eco"
+        }, 
+      "search": true,
+      "typedefs": true,
+      "removeQuotes": "none",
+      "scripts": [], 
+  "menu": {
+  "Github repo": { 
+  "href":"https://github.com/Xx-Mohit-xX/simply-eco",
+  "target":"_blank", 
+  "class":"menu-item", 
+  "id":"repository" 
+  } 
+} 
+}
+}
