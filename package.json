@@ -1,6 +1,6 @@
 {
   "name": "simply-eco",
-  "types": "./lib/types/index.d.ts",
+  "types": "./lib/typings/index.d.ts",
   "version": "0.0.9",
   "description": "A powerful module that allows you to create economy system in your bot with ease.",
   "main": "index.js",
