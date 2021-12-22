@@ -9,10 +9,6 @@ const GMemberData = new mongoose.Schema({
 		type: String,
 		default: null
 	},
-	Id: {
-		type: String,
-		default: null
-	},
 	wallet: {
 		type: Number,
 		default: 0
