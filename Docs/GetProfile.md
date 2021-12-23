@@ -5,7 +5,7 @@ Get User' Profile | `GetProfile`
 ### Usage
 
 ```js
-client.eco.GetProfile(GuildID) 
+client.eco.GetProfile({ GuildID, UserID }) 
 ```
 
 ### Example
@@ -16,7 +16,7 @@ client.eco.GetProfile(GuildID)
 		const userId = user.id;
 		const guildId = message.guild.id;
 
-		let data = await client.eco.GetProfile(guildId, userId);
+		let data = await client.eco.GetProfile({GuildID: guildId, UserID: userId});
 
 		const Profile = data.map(item => {
 			const money = item.wallet || 0;
@@ -57,3 +57,9 @@ client.eco.GetProfile(GuildID)
  - ### Options
 
 - no options ;(
+
+## Global Shop
+
+```js
+client.eco.GetProfile({ UserID: userId }) 
+```
