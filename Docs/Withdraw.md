@@ -5,7 +5,7 @@ Withdraw Money from Bank.. | `Withdraw`
 ### Usage
 
 ```js
-client.eco.Withdraw(UserID, GuildID, Amt) 
+client.eco.Withdraw({UserID, GuildID, Amt}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.Withdraw(UserID, GuildID, Amt)
 
 let user = message.mentions.users.first || message.author
 
-let data = await client.eco.Withdraw(user.id, message.guild.id, 100) 
+let data = await client.eco.Withdraw({UserID: user.id, GuildID: message.guild.id, Amt: 100});
 ```
 
 - ## Return `<Object>`
@@ -33,3 +33,9 @@ let data = await client.eco.Withdraw(user.id, message.guild.id, 100)
  - ### Options
 
 - **Amt** - `Can be any number` or `max`
+
+## Global shop
+
+```js
+await client.eco.Withdraw({UserID: user.id, Amt: 100}) 
+```
