@@ -5,7 +5,7 @@ Work for Earning Money. | `Work`
 ### Usage
 
 ```js
-client.eco.Work(UserID, GuildID) 
+client.eco.Work({UserID, GuildID}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.Work(UserID, GuildID)
 
 let user = message.author
 
-let data = await client.eco.Work(user.id, message.guild.id) 
+let data = await client.eco.Work({UserID: user.id, GuildID: message.guild.id}) 
 ```
 
 - ## Return `<Objects>` on error
@@ -40,3 +40,9 @@ let data = await client.eco.Work(user.id, message.guild.id)
  - ### Options
 
 - no options ;(
+
+## Global shop
+
+```js
+await client.eco.Work({UserID: user.id, Amt: 100}) 
+```
