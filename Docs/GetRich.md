@@ -5,7 +5,7 @@ Shows Top 10 Rich User of The Guild. | `GetRich`
 ### Usage
 
 ```js
-client.eco.GetRich(GuildID) 
+client.eco.GetRich({GuildID}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.GetRich(GuildID)
 
 let user = message.mentions.users.first || message.author
 
-let data = await client.eco.GetRich(message.guild.id) 
+let data = await client.eco.GetRich({GuildID: message.guild.id}) 
 
 let embed = new MessageEmbed()
    .setTitle(`${user.username}'s Inv'`)
