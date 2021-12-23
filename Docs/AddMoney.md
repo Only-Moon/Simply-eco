@@ -23,8 +23,8 @@ let data = await client.eco.AddMoney({UserID: user.id, GuildID: message.guild.id
 
 - no options ;(
 
-### Global shop
-## Note: Your Simply-eco constructor needs to have global option specified!
+## Global shop
+### Note: Your Simply-eco constructor needs to have global option specified!
 
 ### Example
 ```js

@@ -26,7 +26,8 @@ let data = await client.eco.BuyItem({UserID: user.id, GuildID: message.guild.id,
 
 - **item[0]** - `{ item.Name, item.Price,  item.Sell, item.id }`
 
-### Global Shop
+## Global Shop
+### Note: Your Simply-eco constructor needs to have global option specified!
 
 ```js
 client.eco.BuyItem({ UserId: user.id, ItemName: "car"}) 

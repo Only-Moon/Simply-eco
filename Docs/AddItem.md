@@ -21,8 +21,8 @@ let data = await client.eco.AddItem({GuildID: message.guild.id, ItemName: Car, P
 
 - No options :(
 
-### Global shop
-## Note: Your Simply-eco constructor needs to have global option specified!
+## Global shop
+### Note: Your Simply-eco constructor needs to have global option specified!
 ```js
   
 client.eco.AddItem({ ItemName, Price, SellPrice })
