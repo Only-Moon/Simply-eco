@@ -5,7 +5,7 @@ Transfer Amount from one user to another. | `Transfer`
 ### Usage
 
 ```js
-client.eco.Transfer(GuildID, User1ID, User2ID, Amt)
+client.eco.Transfer({GuildID, User1ID, User2ID, Amt})
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.Transfer(GuildID, User1ID, User2ID, Amt)
 
 let user = message.mentions.users.first()
 
-let data = await client.eco.Transfer(message.guild.id, message.author.id, user.id, 100)
+let data = await client.eco.Transfer({GuildID: message.guild.id, User1ID: message.author.id, User2ID: user.id, Amt: 100})
 ```
 
 - ## Returns `GuildData`
@@ -22,3 +22,9 @@ let data = await client.eco.Transfer(message.guild.id, message.author.id, user.i
 ### Options
 
 - no options ;(
+
+## Global shop
+
+```js
+await client.eco.Transfer({ User1ID: message.author.id, User2ID: user.id, Amt: 100})
+```
