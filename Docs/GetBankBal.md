@@ -5,7 +5,7 @@ Get User's Bank Balance  | `GetBank`
 ### Usage
 
 ```js
-client.eco.GetBankBal(UserID, GuildID) 
+client.eco.GetBankBal({UserID, GuildID}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.GetBankBal(UserID, GuildID)
 
 let user = message.mentions.users.first || message.author
 
-let data = await client.eco.GetBankBal(user.id, message.guild.id) 
+let data = await client.eco.GetBankBal({UserID: user.id, GuildID: message.guild.id}) 
 ```
 
 - ## Returns `Bank`
@@ -22,3 +22,10 @@ let data = await client.eco.GetBankBal(user.id, message.guild.id)
  - ### Options
 
 - no options ;(
+    
+## Global Shop
+### Note: Your Simply-eco constructor needs to have global option specified!
+
+```js
+client.eco.GetBankBal({ UserID: user.id }) 
+```
