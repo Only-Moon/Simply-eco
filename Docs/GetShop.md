@@ -5,7 +5,7 @@ Get Shop of User's Guild. | `GetShop`
 ### Usage
 
 ```js
-client.eco.GetShop(client, GuildID) 
+client.eco.GetShop({GuildID}) 
 ```
 
 ### Example
@@ -13,7 +13,7 @@ client.eco.GetShop(client, GuildID)
 ```js
 
     let user = message.mentions.users.first() || message.author;
-    let data = await client.eco.GetShop(client, message.guild.id)
+    let data = await client.eco.GetShop({GuildID: message.guild.id})
     let embed = new MessageEmbed()
       .setTitle(`SHOP`)
       .setFooter(' 👍 ')
@@ -46,10 +46,8 @@ client.eco.GetShop(client, GuildID)
 
 - no options ;(
 
-### Global Shop
+## Global Shop
 
 ```js
-client.eco.GetShop(client, GuildID, {
-  global: true
-}) 
+client.eco.GetShop() 
 ```

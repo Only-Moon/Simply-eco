@@ -5,7 +5,7 @@ Gets Weekly money(*timeout included) | `Weekly`
 ### Usage
 
 ```js
-client.eco.Weekly(UserID, GuildID) 
+client.eco.Weekly({UserID, GuildID}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.Weekly(UserID, GuildID)
 
 let user = message.author
 
-let data = await client.eco.Weekly(user.id, message.guild.id) 
+let data = await client.eco.Weekly({UserID: user.id, GuildID: message.guild.id});
 ```
 
 - ## Return `<Object>`
@@ -31,3 +31,9 @@ let data = await client.eco.Weekly(user.id, message.guild.id)
  - ### Options
 
 - no options ;(
+
+## Global shop
+
+```js
+await client.eco.Weekly({ UserID: user.id });
+```

@@ -5,13 +5,13 @@ Sets amount to give user per week. | `setWeekly`
 ### Usage
 
 ```js
-client.eco.SetWeekly(GuildID, Amt)
+client.eco.SetWeekly({GuildID, Amt})
 ```
 
 ### Example
 
 ```js
-let data = await client.eco.SetWeekly(message.guild.id, Amt)
+let data = await client.eco.SetWeekly({GuildID: message.guild.id,Amt: 20000});
 ```
 
 - ## Returns `GuildData`
@@ -19,3 +19,9 @@ let data = await client.eco.SetWeekly(message.guild.id, Amt)
 ### Options
 
 - no options ;(
+
+## Global
+
+```js
+await client.eco.SetWeekly({ Amt: 20000 });
+```

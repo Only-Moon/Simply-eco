@@ -5,7 +5,7 @@ Sell Item from Inventory. | `SellItem`
 ### Usage
 
 ```js
-client.eco.SellItem(UserID, GuildID, ItemN) 
+client.eco.SellItem({UserID, GuildID, Item}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.SellItem(UserID, GuildID, ItemN)
 
 let user = message.mentions.users.first || message.author
 
-let data = await client.eco.SellItem(user.id, message.guild.id, Car) 
+let data = await client.eco.SellItem({UserID: user.id, GuildID: message.guild.id, Item: "Car"}) 
 ```
 
 - ## Returns `false` - If no shop available 
@@ -24,3 +24,9 @@ let data = await client.eco.SellItem(user.id, message.guild.id, Car)
 ### Options
 
 - **item[0]** - `{item.Name, item.Price,  item.Sell, item.id}`
+
+## Global shop
+
+```js
+await client.eco.SellItem({UserID: user.id, Item: "Car"}) 
+```

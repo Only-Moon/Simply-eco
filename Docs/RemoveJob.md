@@ -5,7 +5,7 @@ Removes User's Job. | `RemoveJob`
 ### Usage
 
 ```js
-client.eco.RemoveJob(GuildID, UserID) 
+client.eco.RemoveJob({GuildID, UserID}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.RemoveJob(GuildID, UserID)
 
 let user = message.author
 
-let data = await client.eco.RemoveJob(message.guild.id, user.id) 
+let data = await client.eco.RemoveJob({GuildID: message.guild.id, UserID: user.id}) 
 ```
 
 - ## Return `NO_JOB` when user dont have job
@@ -23,3 +23,9 @@ let data = await client.eco.RemoveJob(message.guild.id, user.id)
  - ### Options
 
 - no options ;(
+
+## Global shop
+
+```js
+await client.eco.RemoveJob({ UserID: user.id }) 
+```

@@ -5,16 +5,16 @@ Gets Daily money(*timeout included) | `Daily`
 ### Usage
 
 ```js
-client.eco.Daily(UserID, GuildID) 
+client.eco.Daily({UserID, GuildID}) 
 ```
 
 ### Example
 
 ```js
 
-let user = message.author
+let user = message.author;
 
-let data = await client.eco.Daily(user.id, message.guild.id) 
+let data = await client.eco.Daily({UserID: user.id, GuildID: message.guild.id}) 
 ```
 
 - ## Return `<Object>`
@@ -31,3 +31,10 @@ let data = await client.eco.Daily(user.id, message.guild.id)
  - ### Options
 
 - no options ;(
+
+## Global Shop
+### Note: Your Simply-eco constructor needs to have global option specified!
+
+```js
+client.eco.Daily({ UserId: user.id }) 
+```

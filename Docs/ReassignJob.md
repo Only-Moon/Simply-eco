@@ -5,7 +5,7 @@ Sets User's Job from the List of Jobs. | `ReassignJob`
 ### Usage
 
 ```js
-client.eco.ReassignJob(GuildID, UserID, Job) 
+client.eco.ReassignJob({GuildID, UserID, Job}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.ReassignJob(GuildID, UserID, Job)
 
 let user = message.author
 
-let data = await client.eco.ReassignJob(user.id, message.guild.id, job) 
+let data = await client.eco.ReassignJob({UserID: user.id, GuildID: message.guild.id, Job: "gamer"}) 
 ```
 
 - ## Return `NOT_WORKING` on error - if no job
@@ -36,3 +36,8 @@ let data = await client.eco.ReassignJob(user.id, message.guild.id, job)
 
 - no options ;(
 
+## Global shop
+
+```js
+await client.eco.ReassignJob({UserID: user.id, Job: "gamer"}) 
+```

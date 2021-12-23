@@ -5,7 +5,7 @@ Sets User's Job from the List of Jobs. | `SetJob`
 ### Usage
 
 ```js
-client.eco.SetJob(GuildID, UserID, Job) 
+client.eco.SetJob({GuildID, UserID, Job}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.SetJob(GuildID, UserID, Job)
 
 let user = message.author
 
-let data = await client.eco.SetJob(user.id, message.guild.id, job) 
+let data = await client.eco.SetJob({UserID: user.id, GuildID: message.guild.id, Job: "gamer"}) 
 ```
 
 - ## Return `<Array of Jobs>` on error - if job name is invalid
@@ -32,3 +32,9 @@ let data = await client.eco.SetJob(user.id, message.guild.id, job)
  - ### Options
 
 - no options ;(
+
+## Global shop
+
+```js
+await client.eco.SetJob({UserID: user.id, Job: "gamer"})
+```

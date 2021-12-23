@@ -5,7 +5,7 @@ Get User's inventory.  | `GetInv`
 ### Usage
 
 ```js
-client.eco.GetInv(UserID, GuildID) 
+client.eco.GetInv({UserID, GuildID}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.GetInv(UserID, GuildID)
 
 let user = message.mentions.users.first || message.author
 
-let data = await client.eco.GetInv(user.id, message.guild.id) 
+let data = await client.eco.GetInv({UserID: user.id, GuildID: message.guild.id}) 
 
 let embed = new MessageEmbed()
    .setTitle(`${message.author.username}'s Inv'`)
@@ -44,3 +44,10 @@ let embed = new MessageEmbed()
  - ### Options
 
 - no options ;(
+  
+## Global Shop
+### Note: Your Simply-eco constructor needs to have global option specified!
+
+```js
+await client.eco.GetInv({ UserID: user.id }) 
+```

@@ -5,16 +5,16 @@ Get User from Database.  | `GetUser`
 ### Usage
 
 ```js
-client.eco.GetUser(UserID, GuildID) 
+client.eco.GetUser({UserID, GuildID}) 
 ```
 
 ### Example
 
 ```js
 
-let user = message.mentions.users.first || message.author
+let user = message.mentions.users.first || message.author;
 
-let data = await client.eco.GetUser(user.id, message.guild.id) 
+let data = await client.eco.GetUser({UserID: user.id, GuildID: message.guild.id}) 
 ```
 
 - ## Returns `User`
@@ -22,3 +22,9 @@ let data = await client.eco.GetUser(user.id, message.guild.id)
  - ### Options
 
 - no options ;(
+
+## Global shop
+
+```js
+await client.eco.GetUser({ UserID: user.id }) 
+```

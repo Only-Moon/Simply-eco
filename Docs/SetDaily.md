@@ -5,13 +5,13 @@ Sets amount to give user per day | `setDaily`
 ### Usage
 
 ```js
-client.eco.SetDaily(GuildID, Amt)
+client.eco.SetDaily({GuildID, Amt})
 ```
 
 ### Example
 
 ```js
-let data = await client.eco.SetDaily(message.guild.id, 2000)
+let data = await client.eco.SetDaily({GuildID: message.guild.id, Amt: 2000})
 ```
 
 - ## Returns `GuildData`
@@ -19,3 +19,9 @@ let data = await client.eco.SetDaily(message.guild.id, 2000)
 ### Options
 
 - no options ;(
+
+## Global shop
+
+```js
+await client.eco.SetDaily({ Amt: 2000 })
+```
