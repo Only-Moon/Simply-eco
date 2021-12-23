@@ -5,7 +5,7 @@ Deposit Money into Bank. | `Deposit`
 ### Usage
 
 ```js
-client.eco.Deposit(UserID, GuildID, Amt) 
+client.eco.Deposit({UserID, GuildID, Amt}) 
 ```
 
 ### Example
@@ -14,7 +14,7 @@ client.eco.Deposit(UserID, GuildID, Amt)
 
 let user = message.author
 
-let data = await client.eco.Deposit(user.id, message.guild.id, 100) 
+let data = await client.eco.Deposit({UserID: user.id, GuildID: message.guild.id, Amt: 100}) 
 ```
 
 - ## Return `<Object>`
@@ -33,3 +33,10 @@ let data = await client.eco.Deposit(user.id, message.guild.id, 100)
  - ### Options
 
 - **Amt** - `Can be any number` or `max`
+
+## Global Shop
+### Note: Your Simply-eco constructor needs to have global option specified!
+
+```js
+client.eco.Deposit({UserID: user.id, Amt: 100}) 
+```
