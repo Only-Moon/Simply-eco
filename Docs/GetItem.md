@@ -5,15 +5,15 @@ Get item by name or id.
 ### Usage
 
 ```js
-client.eco.GetItem(client, GuildID, item) 
+client.eco.GetItem({ GuildID, item }) 
 ```
 
 ### Example
 
 ```js
 
-
-let data = await client.eco.GetItem(client, message.guild.id, 0) 
+// 0 is the item id, it can be the item name also!
+let data = await client.eco.GetItem({GuildID: message.guild.id, Item: 0}) 
 
 let embed = new MessageEmbed()
   .setTitle(`Item "${data.Name}"`)
@@ -39,7 +39,5 @@ let embed = new MessageEmbed()
 ### Global Shop
 
 ```js
-client.eco.GetItem(client, GuildID, item, {
-  global: true
-}) 
+client.eco.GetItem({ Item: 0 }) 
 ```
