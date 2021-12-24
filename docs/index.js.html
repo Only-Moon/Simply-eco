@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Home - SimplyEco</title>
+    <title>index.js - SimplyEco</title>
     
     <meta name="description" content="Simply Eco is a powerful module that allows you to create economy system in your bot with ease.:)" />
     
@@ -46,99 +46,36 @@
 
 <div id="main">
     
+    <h1 class="page-title">index.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>//importing the files
+const eco = require("./lib/eco");
+/**
+  * SimplyEco
+  * @class
+  * @param {string} token | Mongo URL string}
+  * @param {boolean} options.notify
+  * @returns {Economy Class}
+ */
+function SimplyEco(token, options = {}) {
+    return new eco(token, options);
+}
+//add Options to it
+SimplyEco.eco = eco;
+SimplyEco.version = require("./package.json").version;
 
-
-    <section class="package">
-        <h3> </h3>		
+//exporting this meme
+module.exports = SimplyEco;</code></pre>
+        </article>
     </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    <section class="readme usertext">
-        <article><h2 style="font-size:6.5rem; color:#F4B3CA" align="center"> Simply Eco </h2>
-<p align="center"><img align="center" style="width:0.5px" src="https://i.imgur.com/DWeejI6.jpg"/></p><br/>
-<p align="center">
-<a href='https://ko-fi.com/E1E057WWV' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><br>
-  <a href="https://www.npmjs.com/package/simply-eco"><img src="https://img.shields.io/npm/v/simply-eco.svg?style=flat-square" /></a>
- <a href="https://www.npmjs.com/package/simply-eco"><img src="https://img.shields.io/npm/dt/simply-eco?style=flat-square" /></a><br>
-   <a href="https://www.npmjs.com/package/simply-eco"><img src="https://nodei.co/npm/simply-eco.png?downloadRank=true&downloads=true&downloadRank=true&stars=true" /></a><br>
-  <a href="https://discord.gg/HNfhvCeR6d"><img src="https://invidget.switchblade.xyz/HNfhvCeR6d" alt="Discord"></a>
-</p>
-<blockquote>
-<p><strong>Simply Eco is a powerful module that allows you to create economy system in your bot with ease.:)</strong></p>
-</blockquote>
-<h2><strong>Installation</strong></h2>
-<pre class="prettyprint source lang-js"><code>npm install simply-eco
-</code></pre>
-<h2>Without Customization</h2>
-<pre class="prettyprint source lang-js"><code>const client = &lt;your Discord client>
-//Import package
-const economy = require(&quot;simply-eco&quot;);
-//create new economy() Class
-client.eco = new economy.eco(&quot;YOUR MONGODB URI&quot;)
-
-client.eco.&lt;Method>(&lt;Options>); //return -> Promise ->
-</code></pre>
-<h2>With Customization</h2>
-<pre class="prettyprint source lang-js"><code>const client = &lt;your Discord Client>
-//Import package
-const economy = require(&quot;simply-eco&quot;);
-//create new economy() Class
-
-client.eco = new economy.eco('YOUR MONGODB URI', {
-notify: false
-});
-
-// use the methods
-client.eco.&lt;Method>(&lt;Options>); //returns -> Promise -> 
-</code></pre>
-<h1>Options</h1>
-<ul>
-<li><strong>📌 notify</strong> <code>(Boolean)</code> - Notifies when SimplyEco is connected</li>
-</ul>
-<h2>All Methods</h2>
-<ul>
-<li>Methods: <a href="https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/docs">LINK</a></li>
-</ul>
-<h2>Features</h2>
-<ul>
-<li>Super simple</li>
-<li>Easy to use</li>
-<li>Works with Discord.js v12 and v13</li>
-<li>Works with both Slash and Prefix Commands</li>
-<li>Great Support</li>
-<li>Fully Customizable</li>
-</ul>
-<h2>LINKS</h2>
-<ul>
-<li>📃 Docs: <a href="https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/docs">Link</a></li>
-<li>📃 Example Bot: <a href="https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/Example-Bot">Link</a></li>
-<li>📃 Discord: <a href="https://discord.com/invite/HNfhvCeR6d">Server</a></li>
-</ul>
-<h2>Credits</h2>
-<ul>
-<li>Final Form by: <a href="https://github.com/Xx-Mohit-xX">@Xx-Mohit-xX</a></li>
-<li>Base by: <a href="https://github.com/Yash094">@Yash094</a></li>
-</ul></article>
-    </section>
-
-
 
 
 

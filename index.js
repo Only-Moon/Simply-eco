@@ -1,9 +1,11 @@
 //importing the files
 const eco = require("./lib/eco");
 /**
+  * SimplyEco
+  * @class
   * @param {string} token | Mongo URL string}
   * @param {boolean} options.notify
-  * returns {Economy Class}
+  * @returns {Economy Class}
  */
 function SimplyEco(token, options = {}) {
     return new eco(token, options);
