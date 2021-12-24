@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>SimplyEco the constructor - SimplyEco</title>
+    
+    <meta name="description" content="Simply Eco is a powerful module that allows you to create economy system in your bot with ease.:)" />
+    
+        <meta name="keywords" content="simplyeco, mongo-eco.js, economy-mongo, eco, economy, simply-eco" />
+        <meta name="keyword" content="simplyeco, mongo-eco.js, economy-mongo, eco, economy, simply-eco" />
+    
+    
+    
+    <meta property="og:title" content="SimplyEco Docs"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://i.imgur.com/DWeejI6.png"/>
+    <meta property="og:site_name" content="SimplyEco"/>
+    <meta property="og:url" content="https://simplyeco.js.org"/>
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/Xx-Mohit-xX/simply-eco" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h2><a href="https://www.npmjs.com/package/simply-eco" target="_blank" class="menu-item" id="npm" >Npm Info</a></h2><h2><a href="https://discord.gg/NAaxz5PgNn" target="_blank" class="menu-item" id="server" >Support server</a></h2><h3>Classes</h3><ul><li><a href="SimplyEco%2520the%2520constructor.html">SimplyEco the constructor</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AddItem">AddItem</a></li><li><a href="global.html#AddMoney">AddMoney</a></li><li><a href="global.html#BuyItem">BuyItem</a></li><li><a href="global.html#Daily">Daily</a></li><li><a href="global.html#Deposit">Deposit</a></li><li><a href="global.html#GetBal">GetBal</a></li><li><a href="global.html#GetBankBal">GetBankBal</a></li><li><a href="global.html#GetInv">GetInv</a></li><li><a href="global.html#GetItem">GetItem</a></li><li><a href="global.html#GetProfile">GetProfile</a></li><li><a href="global.html#GetRich">GetRich</a></li><li><a href="global.html#GetShop">GetShop</a></li><li><a href="global.html#GetUser">GetUser</a></li><li><a href="global.html#ReassignJob">ReassignJob</a></li><li><a href="global.html#RemoveItem">RemoveItem</a></li><li><a href="global.html#RemoveJob">RemoveJob</a></li><li><a href="global.html#RemoveMoney">RemoveMoney</a></li><li><a href="global.html#SellItem">SellItem</a></li><li><a href="global.html#SetDaily">SetDaily</a></li><li><a href="global.html#SetJob">SetJob</a></li><li><a href="global.html#SetWeekly">SetWeekly</a></li><li><a href="global.html#SimplyEco">SimplyEco</a></li><li><a href="global.html#Transfer">Transfer</a></li><li><a href="global.html#Weekly">Weekly</a></li><li><a href="global.html#Withdraw">Withdraw</a></li><li><a href="global.html#Work">Work</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">SimplyEco the constructor</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        SimplyEco the constructor
+        </h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+    
+
+    <h4 class="name" id="SimplyEco the constructor"><span class="type-signature"></span>new SimplyEco the constructor<span class="signature">(dbUrl, options, client)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_eco.js.html">lib/eco.js</a>, <a href="lib_eco.js.html#line10">line 10</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Connecting To The Database</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>new eco.eco(client, dbUrl, { global: true | false, notify: true | false })</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dbUrl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the mongoose database url</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;Object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the options for constructor</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>notify</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>notification toggle for simplyeco</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>global</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>global toggle for simplyeco</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>client</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Client</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the discord.js client</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc usertext">
+        <p>Error while connection to mongoose</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl class="param-type">
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">TypeError</span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Dec 24 2021 11:04:47 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>

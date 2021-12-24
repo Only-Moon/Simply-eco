@@ -1,11 +1,12 @@
 //importing the files
 const eco = require("./lib/eco");
 /**
-  * SimplyEco
-  * @class
-  * @param {string} token | Mongo URL string}
-  * @param {boolean} options.notify
-  * @returns {Economy Class}
+  * @name SimplyEco
+  * @description SimplyEco extender
+  * @param {string} token - Mongo URL string}
+  * @param {Object[]} options - the options for constructor
+	 * @param {boolean} options[].notify - notification toggle for simplyeco
+	 * @param {boolean} options[].global - global toggle for simplyeco
  */
 function SimplyEco(token, options = {}) {
     return new eco(token, options);

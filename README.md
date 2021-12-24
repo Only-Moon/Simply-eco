@@ -24,9 +24,9 @@ const client = <your Discord client>
 //Import package
 const economy = require("simply-eco");
 //create new economy() Class
-client.eco = new economy.eco("YOUR MONGODB URI")
+client.eco = new economy.eco(client , "YOUR MONGODB URI")
 
-client.eco.<Method>(<Options>); //return -> Promise ->
+client.eco.<Method>({<Options>}); //return -> Promise ->
 ```
 
 ## With Customization 
@@ -37,35 +37,38 @@ const client = <your Discord Client>
 const economy = require("simply-eco");
 //create new economy() Class
 
-client.eco = new economy.eco('YOUR MONGODB URI', {
-notify: false
+client.eco = new economy.eco(client, 'YOUR MONGODB URI', {
+notify: false, 
+global: true
 });
 
 // use the methods
-client.eco.<Method>(<Options>); //returns -> Promise -> 
+client.eco.<Method>({<Options>}); //returns -> Promise -> 
 ```
 # Options
 
 - **📌 notify** `(Boolean)` - Notifies when SimplyEco is connected
+- ** 🔮 global** `(Boolean)` - Multi guild toggle
 
 
 
 ## All Methods 
-- Methods: [LINK](https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/docs)
+- Methods: [LINK](https://simplyeco.js.org/SimplyEco.html)
 
 ## Features
 
 - Super simple
 - Easy to use
 - Works with Discord.js v12 and v13
-- Works with both Slash and Prefix Commands 
+- Works with both Slash and Prefix Commands
+- More than 25 functions
+- Multi - Guild Support
 - Great Support
 - Fully Customizable
 
 ## LINKS
 
-- 📃 Docs: [Link](https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/docs)
-- 📃 Example Bot: [Link](https://github.com/Xx-Mohit-xX/Simply-eco/tree/master/Example-Bot)
+- 📃 Docs: [Link](https://simplyeco.js.org)
 - 📃 Discord: [Server](https://discord.com/invite/HNfhvCeR6d)
 
 

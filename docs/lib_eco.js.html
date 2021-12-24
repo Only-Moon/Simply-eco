@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/Xx-Mohit-xX/simply-eco" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h2><a href="https://www.npmjs.com/package/simply-eco" target="_blank" class="menu-item" id="npm" >Npm Info</a></h2><h2><a href="https://discord.gg/NAaxz5PgNn" target="_blank" class="menu-item" id="server" >Support server</a></h2><h3>Classes</h3><ul><li><a href="SimplyEco.html">SimplyEco</a><ul class='methods'><li data-type='method'><a href="SimplyEco.html#AddItem">AddItem</a></li><li data-type='method'><a href="SimplyEco.html#AddMoney">AddMoney</a></li><li data-type='method'><a href="SimplyEco.html#BuyItem">BuyItem</a></li><li data-type='method'><a href="SimplyEco.html#Daily">Daily</a></li><li data-type='method'><a href="SimplyEco.html#Deposit">Deposit</a></li><li data-type='method'><a href="SimplyEco.html#GetBal">GetBal</a></li><li data-type='method'><a href="SimplyEco.html#GetBankBal">GetBankBal</a></li><li data-type='method'><a href="SimplyEco.html#GetInv">GetInv</a></li><li data-type='method'><a href="SimplyEco.html#GetItem">GetItem</a></li><li data-type='method'><a href="SimplyEco.html#GetProfile">GetProfile</a></li><li data-type='method'><a href="SimplyEco.html#GetRich">GetRich</a></li><li data-type='method'><a href="SimplyEco.html#GetShop">GetShop</a></li><li data-type='method'><a href="SimplyEco.html#GetUser">GetUser</a></li><li data-type='method'><a href="SimplyEco.html#ReassignJob">ReassignJob</a></li><li data-type='method'><a href="SimplyEco.html#RemoveItem">RemoveItem</a></li><li data-type='method'><a href="SimplyEco.html#RemoveJob">RemoveJob</a></li><li data-type='method'><a href="SimplyEco.html#RemoveMoney">RemoveMoney</a></li><li data-type='method'><a href="SimplyEco.html#SellItem">SellItem</a></li><li data-type='method'><a href="SimplyEco.html#SetDaily">SetDaily</a></li><li data-type='method'><a href="SimplyEco.html#SetJob">SetJob</a></li><li data-type='method'><a href="SimplyEco.html#SetWeekly">SetWeekly</a></li><li data-type='method'><a href="SimplyEco.html#Transfer">Transfer</a></li><li data-type='method'><a href="SimplyEco.html#Weekly">Weekly</a></li><li data-type='method'><a href="SimplyEco.html#Withdraw">Withdraw</a></li><li data-type='method'><a href="SimplyEco.html#Work">Work</a></li></ul></li><li></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/Xx-Mohit-xX/simply-eco" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h2><a href="https://www.npmjs.com/package/simply-eco" target="_blank" class="menu-item" id="npm" >Npm Info</a></h2><h2><a href="https://discord.gg/NAaxz5PgNn" target="_blank" class="menu-item" id="server" >Support server</a></h2><h3>Classes</h3><ul><li><a href="SimplyEco%2520the%2520constructor.html">SimplyEco the constructor</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AddItem">AddItem</a></li><li><a href="global.html#AddMoney">AddMoney</a></li><li><a href="global.html#BuyItem">BuyItem</a></li><li><a href="global.html#Daily">Daily</a></li><li><a href="global.html#Deposit">Deposit</a></li><li><a href="global.html#GetBal">GetBal</a></li><li><a href="global.html#GetBankBal">GetBankBal</a></li><li><a href="global.html#GetInv">GetInv</a></li><li><a href="global.html#GetItem">GetItem</a></li><li><a href="global.html#GetProfile">GetProfile</a></li><li><a href="global.html#GetRich">GetRich</a></li><li><a href="global.html#GetShop">GetShop</a></li><li><a href="global.html#GetUser">GetUser</a></li><li><a href="global.html#ReassignJob">ReassignJob</a></li><li><a href="global.html#RemoveItem">RemoveItem</a></li><li><a href="global.html#RemoveJob">RemoveJob</a></li><li><a href="global.html#RemoveMoney">RemoveMoney</a></li><li><a href="global.html#SellItem">SellItem</a></li><li><a href="global.html#SetDaily">SetDaily</a></li><li><a href="global.html#SetJob">SetJob</a></li><li><a href="global.html#SetWeekly">SetWeekly</a></li><li><a href="global.html#SimplyEco">SimplyEco</a></li><li><a href="global.html#Transfer">Transfer</a></li><li><a href="global.html#Weekly">Weekly</a></li><li><a href="global.html#Withdraw">Withdraw</a></li><li><a href="global.html#Work">Work</a></li></ul>
 </nav>
 
 <div id="main">
@@ -66,12 +66,16 @@ const { Client } = require('discord.js');
 
 class SimplyEco {
 	/**
-   * Simply-eco constructor
+   * @name SimplyEco the constructor
    * @class
+   * @constructs SimplyEco
 	 * @description Connecting To The Database
-	 * @param dbUrl
-	 * @param {{ global?: boolean, notify?: boolean }} options
-	 * @param {Client} client
+	 * @param {string} dbUrl - the mongoose database url
+	 * @param {Object[]} options - the options for constructor
+	 * @param {boolean} options[].notify - notification toggle for simplyeco
+	 * @param {boolean} options[].global - global toggle for simplyeco
+	 * @param {Client} client - the discord.js client
+   * @throws {TypeError} Error while connection to mongoose 
    * @example new eco.eco(client, dbUrl, { global: true | false, notify: true | false })
 	 */
 	constructor(client, dbUrl, options = {}) {
@@ -95,21 +99,25 @@ class SimplyEco {
 				else return console.log("\x1b[32m%s\x1b[0m", "[INFO] SimplyEco connected to Database");
 			})
 			.catch(e => {
-				throw new Error(`An Error Just Occurred. ${e}`);
+				throw new TypeError(`An Error Just Occurred. ${e.stack}`);
 			});
 	}
 	/**
-	 * SetWeekly
+	 * @name SetWeekly
 	 * @description Set a weekly amount for a guild or global. GuildID is not needed for global use.
-	 * @param {{ GuildID?: boolean, Amt: number }}
+	 * @param {boolean} GuildID - the guild id
+   * @param {number} Amt - the weekly amount 
+   * @throws {TypeError} GuildID when guild id is not provided
+   * @throws {TypeError} Amt when amount is not provided
 	 * @example SetWeekly({ GuildID: "881789379553656872", Amt: 10000 })
-   * @returns { weeklyAmt?: number } 
+   * @returns {number} the weekly amount
 	 */
 
 	async SetWeekly({ GuildID, Amt }) {
 		if (!this.options?.global) {
 			if (!GuildID) throw new TypeError('A GuildID must be specified');
 			if (!Amt) throw new TypeError('An Amount to give must be specified.');
+			if (isNaN(Amt)) throw new TypeError("Amount must be in number")
 			let GuildData = await guildData.findOne({
 				gid: GuildID
 			});
@@ -125,6 +133,7 @@ class SimplyEco {
 			return GuildData.weeklyAmt;
 		} else {
 			if (!Amt) throw new TypeError('A Amount to exchange must be specified.');
+			if (isNaN(Amt)) throw new TypeError("Amount must be in number")
 			let globalData = await globalShop.findOne({
 				Id: this.Client.user.id,
 			});
@@ -142,16 +151,20 @@ class SimplyEco {
 	}
 
 	/**
-	 * SetDaily
+	 * @name SetDaily
 	 * @description Set a daily amount for a guild or global. GuildID is not needed for global use.
-	 * @param {{ GuildID?: boolean, Amt: number }}
+	 * @param {string} GuildID - the guild id 
+   * @param {number} Amt - the daily amount
+   * @throws {TypeError} GuildID when guild id is not provided
+   * @throws {TypeError} Amt when amount is not provided
 	 * @example SetDaily({ GuildID: "881789379553656872", Amt: 10000 })
-   * @returns { dailyAmt?: number } 
+   * @returns {number} the daily amt 
 	 */
 	async SetDaily({ GuildID, Amt }) {
 		if (!this.options?.global) {
 			if (!GuildID) throw new TypeError('A GuildID must be specified'); 
 			if (!Amt) throw new TypeError('An Amount to give must be specified.');
+			if (isNaN(Amt)) throw new TypeError("Amt must be in number")
 			let GuildData = await guildData.findOne({
 				gid: GuildID
 			});
@@ -164,9 +177,10 @@ class SimplyEco {
 			}
 			GuildData.dailyAmt = Number(Amt);
 			GuildData.save();
-			return GuildData;
+			return GuildData.dailyAmt;
 		} else {
 			if (!Amt) throw new TypeError('A Amount to exchange must be specified.');
+			if (isNaN(Amt)) throw new TypeError("Amt must be in number")
 			let globalData = await globalShop.findOne({
 				Id: this.Client.user.id
 			});
@@ -179,18 +193,24 @@ class SimplyEco {
 			}
 			globalData.dailyAmt = Number(Amt);
 			globalData.save();
-			return globalData;
+			return globalData.dailyAmt;
 		}
 	}
 
 	/**
-	 * Transfer
+	 * @name Transfer
 	 * @description Transfer money over 2 people. GuildID property is not needed for global use.
-	 * @param {{ GuildID?: string, User1ID: string, User2ID: string, Amt: number }}
-	 * @example Transfer({ GuildID: "881789379553656872", Amt: 10000, User1ID: "777474453114191882", User2ID: "753974636508741673" })
-   * @returns { USER1: { wallet: number } , USER2: wallet: { number } }
-	 */
-	async Transfer({ GuildID, User1ID, User2ID, Amt }) {
+	 * @param {string} GuildID - guild id
+   * @param {string} User1ID - user1 id
+   * @param {string} User2ID - user2 id
+   * @param {number} Amt - the amount to transfer
+   * @throws {TypeError} User1ID when user1 id is not provided  
+  * @throws {TypeError} User2ID when user2 id is not provided 
+   * @throws {TypeError} Amt when amount is not provided
+   * @example Transfer({ GuildID: "881789379553656872", Amt: 10000, User1ID: "777474453114191882", User2ID: "753974636508741673" })
+   * @returns {(string|Object)} return NOT_ENOUGH_CASH or USER1 and USER2 wallet bal
+*/
+ async Transfer({ GuildID, User1ID, User2ID, Amt }) {
 		if (!this.options?.global) {
 			if (!GuildID) throw new TypeError('A guild id must be specified.');
 			if (!User1ID) throw new TypeError('A User must be specified.');
@@ -271,11 +291,14 @@ class SimplyEco {
 	}
 
 	/**
-	 * RemoveItem
+	 * @name RemoveItem
 	 * @description Remove an item from the shop. GuildID is not needed for global use.
-	 * @param {{ GuildID?: string, Item: string | number }}
+	 * @param {string} GuildID? - the guild id 
+	 * @param {(string|number)} Item - the item name or number
+    * @throws {TypeError} GuildID when guild id is not provided
+    * @throws {TypeError} Item when item is not provided
 	 * @example RemoveItem({ GuildID: "881789379553656872", Item: "very expensive pancakes" | "0"})
-   * @returns { shopItems: { Name: string, Price: number, Sell: number, id: number }}
+   * @returns {(string|Array)} return NO_ITEM or ITEM_NOT_FOUND or INVALID_ITEM or array of shopItems objects
 	 */
 	async RemoveItem({ GuildID, Item }) {
 		if (!Item) throw new TypeError('A Item Id must be specified.');
@@ -341,7 +364,7 @@ class SimplyEco {
 
       }   
       } else {
-     return "Invalid Item"
+     return "INVALID_ITEM";
       }
 
 			await GuildData.save();
@@ -350,11 +373,18 @@ class SimplyEco {
 	}
 
 	/**
-	 * AddItem
-	 * @param {{GuildID?: string, ItemName: string, Price: number, SellPrice: number }} 
-	 * @description Add an item to a user. GuildID is not needed for global use. 
+	 * @name AddItem
+	 * @description Add an item to a user. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id
+	 * @param {string} ItemName - the item name
+	 * @param {number} Price - the price of item
+	 * @param {number} SellPrice - the selling price
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * @throws {TypeError} ItemName when item name is not provided
+	 * @throws {TypeError} Price when price is not provided 
+	 * throws {TypeError} SellPrice when sell price is not provided 
 	 * @example AddItem({ GuildID: "881789379553656872", ItemName: "very expensive pancakes", Price: 10000, SellPrice: 1000 })
-   * @returns { shopItems: { Name: number, Price: number, Sell: number, id: number }}
+   * @returns {Array} return array of shopItems objects
 	 */
 	async AddItem({ GuildID, ItemName, Price, SellPrice }) {
 		if (!ItemName) throw new TypeError('A Item Name must be specified.');
@@ -415,11 +445,16 @@ class SimplyEco {
 	}
 
 	/**
-	 * BuyItem
-	 * @param {{GuildID?: string, Item: string | number, UserID: string }} 
+	 * @name BuyItem
 	 * @description Buy an item to a user. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {(string|number)} Item - the item name or id
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * @throws {TypeError} Item when item name or id is not provided
+	 * throws {TypeError} UserID when user id is not provided 
 	 * @example BuyItem({ GuildID: "881789379553656872", Item: "very expensive pancakes" | "0", user: "753974636508741673" })
-   * @returns { item: { Name: string, Price: number, Sell: number, id: number }}
+   * @returns {(string|Array)} return ITEM_NOT_FOUND or NOT_ENOUGH_CASH or ALREADY_PURCHASED or array of item objects
 	 */
 	async BuyItem({ UserID, GuildID, Item }) {
 		if (!UserID) throw new TypeError('A User ID must be specified');
@@ -520,11 +555,16 @@ class SimplyEco {
 	}
 
 	/**
-	 * SellItem
-	 * @param {{GuildID?: string, Item: string | number, UserID: string }} 
+	 * @name SellItem
 	 * @description Sell an item. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {(string|number)} Item - the item name or id
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * @throws {TypeError} Item when item name or id is not provided
+	 * throws {TypeError} UserID when user id is not provided 
 	 * @example SellItem({ GuildID: "881789379553656872", Item: "very expensive pancakes" | "0", user: "753974636508741673" })
-   * @returns { itemName: { Name: string, Price: number, Sell: number, id: number }}
+   * @returns {(string|Array)} return TRY_AGAIN or NO_ITEM_IN_INVENTORY or NOT_PURCHASED or NOT_AVAILABLE_IN_SHOP or array of item objects
 	 */
 	async SellItem({ UserID, GuildID, Item }) {
 		if (!UserID) throw new TypeError('A member ID must be specified');
@@ -558,7 +598,7 @@ class SimplyEco {
 
 			if (!item2) {
 				return 'NOT_PURCHASED';
-			} else if (itemName == "[]") {
+			} else if (!itemName[0]) {
 				return 'NOT_AVAILABLE_IN_SHOP';
 			} else if (
 				UserData.inventory.filter(item => item.Name === itemName.Name)
@@ -617,11 +657,14 @@ class SimplyEco {
 	}
 
 	/**
-	 * Daily
-	 * @param {{GuildID?: string, UserID: string }} 
+	 * @name Daily 
 	 * @description Collect the daily amount for an user. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	 * @example Daily({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-   * @returns { wallet: number }
+   * @returns {(string|number)} return ALREADY_USED or user's wallet bal
 	 */
 	async Daily({ UserID, GuildID }) {
 		if (!this.options?.global) {
@@ -641,7 +684,13 @@ class SimplyEco {
 			} else if (GuildData) {
 				AMT = GuildData.dailyAmt;
 			}
-			let timeout = 86400000;
+			
+     /** 
+       * @constant 
+       * @type {number} 
+       * @default
+      */
+			const timeout = 86400000;
 			if (!UserData) {
 				let AddUser = new guildUserData({
 					userID: UserID,
@@ -680,7 +729,12 @@ class SimplyEco {
 			} else if (globalData) {
 				AMT = globalData.dailyAmt;
 			}
-			let timeout = 86400000;
+			 /** 
+       * @constant 
+       * @type {number} 
+       * @default
+      */
+			const timeout = 86400000;
 			if (!UserData) {
 				let AddUser = new globalUserData({
 					userID: UserID,
@@ -706,11 +760,14 @@ class SimplyEco {
 		}
 	}
 	/**
-	 * Weekly
-	 * @param {{GuildID?: string, UserID: string }} 
+	 * @name Weekly
 	 * @description Collect the weekly amount for an user. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	 * @example Daily({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-   * @returns { wallet: number }
+   * @returns {(string|number)} return ALREADY_USED with timeout or user's wallet bal
 	 */
 	async Weekly({ UserID, GuildID }) {
 		if (!this.options?.global) {
@@ -731,7 +788,12 @@ class SimplyEco {
 			if (GuildData) {
 				AMT = GuildData.weeklyAmt;
 			}
-			let timeout = 604800000;
+     /** 
+       * @constant 
+       * @type {number} 
+       * @default
+      */
+			const timeout = 604800000;
 			if (!UserData) {
 				let AddUser = new guildUserData({
 					userID: UserID,
@@ -771,7 +833,12 @@ class SimplyEco {
 			if (GuildData) {
 				AMT = GuildData.weeklyAmt;
 			}
-			let timeout = 604800000;
+     /** 
+       * @constant 
+       * @type {number} 
+       * @default
+      */
+			const timeout = 604800000;
 			if (!UserData) {
 				let AddUser = new globalUserData({
 					userID: UserID,
@@ -797,11 +864,14 @@ class SimplyEco {
 		}
 	}
 	/**
-	* GetInv
-	* @param {{GuildID?: string, UserID: string }} 
+	* @name GetInv
 	* @description Get an inventory of an user. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	* @example GetInv({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-  * @returns { inventory: { Name: string, Price: number, Sell: number, id: number }}
+  * @returns {(string|Array)} return NO_ITEM or array of user inventory objects
 	*/
 	async GetInv({ UserID, GuildID }) {
 		if (!this.options?.global) {
@@ -859,11 +929,14 @@ class SimplyEco {
 	}
 
 	/**
-	* GetUser
-	* @param {{GuildID?: string, UserID: string }} 
+	* @name GetUser
 	* @description Get an user data of an user. GuildID is not needed for global use.
+	* @param {string} GuildID - the guild id 
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	* @example GetUser({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-  * @returns { userId: string, Id: string, wallet: number, bank: number, dailyAmt: number, lastUsedDaily:  Date, lastUsedWekly: Date, inventory: ({Name: string, Price: string, Sell: string, id: 0})[], job: string, lastUsedWork: Date }
+  * @returns {Array} return array of user objects
 	*/
 	async GetUser({ UserID, GuildID }) {
 		// Required Parameters
@@ -906,11 +979,15 @@ class SimplyEco {
 	}
 
 	 /**
-	* GetBal
-	* @param {{GuildID?: string, UserID: string }} 
-	* @description Get an balance of an user. GuildID is not needed for global use.
+	* @name GetBal
+	* @description Get an balance of an user. GuildID is not needed for global use
+	 * @param {string} GuildID - the guild id 
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	* @example GetBal({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-  * @returns { wallet: number }	*/
+  * @returns {number} return user's wallet balance	
+  */
 	async GetBal({ UserID, GuildID }) {
 		if (!this.options?.global) {
 			if (!GuildID) throw new TypeError('A guild id must be specified.');
@@ -950,11 +1027,14 @@ class SimplyEco {
 		}
 	}
 	/**
-	* GetItem
-	* @param {{GuildID?: string, Item: string }} 
+	* @name GetItem
 	* @description Get an item data. GuildID is not needed for global use.
+	* @param {string} GuildID - the guild id
+	 * @param {string} Item - the item name 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} Item when item is not provided 
 	* @example GetItem({ GuildID: "881789379553656872", Item: "pancakes" })
-  * @returns { item: { Name: string, Price: number, Sell: number, id: number }}	
+  * @returns {Array} return array of item objects
 */
 	async GetItem({ GuildID, Item }) {
 		if (!Item) throw new TypeError('No item name or id specified.');
@@ -974,14 +1054,17 @@ class SimplyEco {
 		}
 	}
 	/**
-	* GetBankBal
-	* @param {{GuildID?: string, UserID: string }} 
+	* @name GetBankBal
 	* @description Get bank balance of an user. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	* @example GetBankBal({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-  * @returns { wallet : number }
+  * @returns {number} return user's bank bal
 	*/
 	async GetBankBal({ UserID, GuildID }) {
-		// Required Parameters
+
 		if (!this.options?.global) {
 			if (!GuildID) throw new TypeError('A guild id must be specified.');
 			if (!UserID) throw new TypeError('A member ID must be specified');
@@ -1020,11 +1103,14 @@ class SimplyEco {
 		}
 	}
 		/**
-	* GetRich
-	* @param {{GuildID?: string, UserID: string }} 
+	* @name GetRich
 	* @description Get the richest people. GuildID is not needed for global use.
+	* @param {string} GuildID - the guild id
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	* @example GetRich({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-  * @returns { lb: {userId: string, Id: string, wallet: number, bank: number, dailyAmt: number, lastUsedDaily:  Date, lastUsedWekly: Date, inventory: ({Name: string, Price:string, Sell: string, id: 0})[], job: string, lastUsedWork: Date} }
+  * @returns {Array} return array of user objects
 	*/
 	async GetRich({ GuildID, UserID }) {
 		if (!this.options?.global) {
@@ -1062,11 +1148,14 @@ class SimplyEco {
 	}
 
 	/**
-	* GetProfile
-	* @param {{GuildID?: string, UserID: string }} 
+	* @name GetProfile
 	* @description Get a profile data of an user. GuildID is not needed for global use.
+	* @param {string} GuildID - the guild id 
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	* @example GetProfile({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-  * @returns { Profile: { user: string, wallet: number, job: string, bank: number, inventory: number, salary: number }}
+  * @returns {Array} return array of profile objects
 	*/
 	async GetProfile({ GuildID, UserID }) {
 		if (!UserID) throw new TypeError('A user id must be specified.');
@@ -1106,11 +1195,16 @@ class SimplyEco {
 	}
 
 /**
-	* AddMoney
-	* @param {{GuildID?: string, Amt: number, UserID: string }} 
+	* @name AddMoney
+	* @param {string} GuildID - the guild id
+	* @param {number} Amt - the amount to add
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * @throws {TypeError} Amt when amount is not provided
+	 * throws {TypeError} UserID when user id is not provided 
 	* @description Add money to an user. GuildID is not needed for global use.
-	* @example AddMoney({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-  * @returns { wallet: number }
+	* @example AddMoney({ GuildID: "881789379553656872", UserID: "753974636508741673", Amt: "1000" })
+  * @returns {number} return user's wallet bal
 	*/
 	async AddMoney({ UserID, GuildID, Amt }) {
 		// Required Parameters
@@ -1167,16 +1261,22 @@ class SimplyEco {
 	}
 
 	/**
-	* RemoveMoney
-	* @param {{GuildID?: string, UserID: string, Amt: number }} 
+	* @name RemoveMoney
 	* @description Remove money to an user. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {number} Amt - the amount to remove
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * @throws {TypeError} Amt when amount is not provided
+	 * throws {TypeError} UserID when user id is not provided 
 	* @example AddMoney({ GuildID: "881789379553656872", UserID: "753974636508741673", Amt: 1000 })
-  * @returns { wallet: number }
+  * @returns {(string|number)} return NO_MONEY or NOT_ENOUGH_CASH or user's wallet bal
 	*/
 	async RemoveMoney({ UserID, GuildID, Amt }) {
 		// Required Parameters
 		if (!UserID) throw new TypeError('A user ID must be specified');
 		if (!Amt) throw new TypeError('An amount of money must be specified.');
+		if (isNaN(Amt)) throw new TypeError('Amt should be in number');
 
 		if (!this.options?.global) {
 			if (!GuildID) throw new TypeError('A guild id must be specified.');
@@ -1187,7 +1287,10 @@ class SimplyEco {
 			});
 			//If None Is Found
 			if (!UserData) {
-				return;
+				return "NO_MONEY";
+			}
+			if (UserData.wallet &lt; Amt) {
+				return 'NOT_ENOUGH_CASH';
 			}
 			// Update Wallet
 			UserData.wallet -= Number(Amt);
@@ -1213,11 +1316,16 @@ class SimplyEco {
 	}
 
 	/**
-	 * Deposit
-	 * @param {{UserID: string, GuildID?: string, Amt: number | "max"}}
+	 * @name Deposit
 	 * @description Deposit money to an bank. GuildID is not needed for global use.
+	 	 * @param {string} GuildID - the guild id 
+	 * @param {(string|number)} Amt - the amount to deposit
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * @throws {TypeError} Amt when amoumt is not provided
+	 * throws {TypeError} UserID when user id is not provided 
 	 * @example Deposit({ GuildID: "881789379553656872", Amt: 10, UserID: "753974636508741673" })
-   * @returns { wallet: number, bank: number }
+   * @returns {(string|Object)} returns NO_CASH_IN_WALLET or NOT_ENOUGH_CASH or bank and wallet balance
 	 */
 
 	async Deposit({ UserID, GuildID, Amt }) {
@@ -1289,11 +1397,16 @@ class SimplyEco {
 		}
 	}
 	/**
-	 * Withdraw
-	 * @param {{UserID: string, GuildID?: string, Amt: number | "max"}}
+	 * @name Withdraw
 	 * @description Withdraw money from a bank. GuildID is not needed for global use.
+	 	* @param {string} GuildID - the guild id 
+	 * @param {(string|number)} Amt - the amount to withdraw 
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * @throws {TypeError} Amt when amount is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	 * @example Withdraw({ GuildID: "881789379553656872", Amt: 10, UserID: "753974636508741673" })
-   * @returns { wallet: number, bank: number }
+   * @returns {(string|Object)} return NO_CASH_IN_BANK or NOT_ENOUGH_CASH or bank and wallet balance
 	 */
 	async Withdraw({ UserID, GuildID, Amt }) {
 
@@ -1368,11 +1481,12 @@ class SimplyEco {
 	}
 
 	/**
-	 * GetShop
-	 * @param {{ GuildID?: string}}
+	 * @name GetShop
 	 * @description Get shop items. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
 	 * @example GetShop({ GuildID: "881789379553656872" })
-   * @returns { shopItems: { Name: string, Price: number, Sell: number, id: number }}
+   * @returns {(string|Array)} return NO_ITEM_IN_SHOP or array of objects in shop
 	 */
 	async GetShop({ GuildID }) {
 		// Required Parameters
@@ -1424,11 +1538,16 @@ class SimplyEco {
 	}
 
 	/**
-	 * ReassignJob
-	 * @param {{ GuildID?: string, Job: string, UserID: string}}
+	 * @name ReassignJob
 	 * @description Reassign a job. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {string} Job - the job name
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * @throws {TypeError} Job when job is not provided
+	 * throws {TypeError} UserID when user id is not provided  
 	 * @example ReassignJob({ GuildID: "881789379553656872", UserID: "753974636508741673", Job: "Doctor" })
-   * @returns { SUCCESS: string }
+   * @returns {(string|Array)} return SUCCESS or array of jobs
 	 */
 	async ReassignJob({ UserID, GuildID, Job }) {
 		if (!UserID) throw new TypeError('A user ID must be specified.');
@@ -1506,11 +1625,14 @@ class SimplyEco {
 	}
 
 	/**
-	 * RemoveJob
-	 * @param {{ GuildID?: string,  UserID: string}}
+	 * @name RemoveJob
 	 * @description Remove a job. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	 * @example RemoveJob({ GuildID: "881789379553656872", UserID: "753974636508741673"})
-  * @returns { SUCCESS: string }
+  * @returns {string} return SUCCESS or NO_JOB
 	 */
 
 	async RemoveJob({ GuildID, UserID }) {
@@ -1553,11 +1675,16 @@ class SimplyEco {
 	}
 
 	/**
-	 * SetJob
-	 * @param {{ GuildID?: string,  UserID: string, Job: string}}
+	 * @name SetJob
 	 * @description Set a job. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {string} Job - the job name
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * @throws {TypeError} Job when job is not provided
+	 * throws {TypeError} UserID when user id is not provided 
 	 * @example SetJob({ GuildID: "881789379553656872", UserID: "753974636508741673", Job: "gamer"})
-   * @returns { SUCCESS: string }
+   * @returns {(string|Array)} return SUCCESS or array of jobs
 	 */
 
 	async SetJob({ UserID, GuildID, Job }) {
@@ -1635,11 +1762,14 @@ class SimplyEco {
 	}
 
 	/**
-	 * Work
-	 * @param {{ GuildID?: string,  UserID: string}}
+	 * @name Work
 	 * @description Work for an user. GuildID is not needed for global use.
+	 * @param {string} GuildID - the guild id 
+	 * @param {string} UserID - the user id 
+	 * @throws {TypeError} GuildID when guild id is not provided 
+	 * throws {TypeError} UserID when user id is not provided 
 	 * @example Work({ GuildID: "881789379553656872", UserID: "753974636508741673" })
-   * @returns { wallet: number }
+   * @returns {(string|Array)} return NO_JOB or ALREADY_WORKING with time remaining or array of object 
 	 */
 	async Work({ UserID, GuildID }) {
 		if (!UserID) throw new TypeError('A member ID must be specified');
@@ -1651,8 +1781,13 @@ class SimplyEco {
 				gid: GuildID
 			});
 			let AMT = UserData.salary;
-
-			let timeout = 7200000;
+			
+     /** 
+       * @constant 
+       * @type {number} 
+       * @default
+      */
+			const timeout = 7200000;
 			if (!UserData) {
 				let AddUser = new guildUserData({
 					userID: UserID,
@@ -1691,7 +1826,12 @@ class SimplyEco {
 			});
 			let AMT = UserData.salary;
 
-			let timeout = 7200000;
+     /** 
+       * @constant 
+       * @type {number} 
+       * @default
+      */
+			const timeout = 7200000;
 			if (!UserData) {
 				let AddUser = new globalUserData({
 					userID: UserID,
@@ -1763,7 +1903,7 @@ module.exports = SimplyEco;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Dec 24 2021 07:34:07 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Dec 24 2021 11:04:47 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

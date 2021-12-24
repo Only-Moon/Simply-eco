@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/Xx-Mohit-xX/simply-eco" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h2><a href="https://www.npmjs.com/package/simply-eco" target="_blank" class="menu-item" id="npm" >Npm Info</a></h2><h2><a href="https://discord.gg/NAaxz5PgNn" target="_blank" class="menu-item" id="server" >Support server</a></h2><h3>Classes</h3><ul><li><a href="SimplyEco.html">SimplyEco</a><ul class='methods'><li data-type='method'><a href="SimplyEco.html#AddItem">AddItem</a></li><li data-type='method'><a href="SimplyEco.html#AddMoney">AddMoney</a></li><li data-type='method'><a href="SimplyEco.html#BuyItem">BuyItem</a></li><li data-type='method'><a href="SimplyEco.html#Daily">Daily</a></li><li data-type='method'><a href="SimplyEco.html#Deposit">Deposit</a></li><li data-type='method'><a href="SimplyEco.html#GetBal">GetBal</a></li><li data-type='method'><a href="SimplyEco.html#GetBankBal">GetBankBal</a></li><li data-type='method'><a href="SimplyEco.html#GetInv">GetInv</a></li><li data-type='method'><a href="SimplyEco.html#GetItem">GetItem</a></li><li data-type='method'><a href="SimplyEco.html#GetProfile">GetProfile</a></li><li data-type='method'><a href="SimplyEco.html#GetRich">GetRich</a></li><li data-type='method'><a href="SimplyEco.html#GetShop">GetShop</a></li><li data-type='method'><a href="SimplyEco.html#GetUser">GetUser</a></li><li data-type='method'><a href="SimplyEco.html#ReassignJob">ReassignJob</a></li><li data-type='method'><a href="SimplyEco.html#RemoveItem">RemoveItem</a></li><li data-type='method'><a href="SimplyEco.html#RemoveJob">RemoveJob</a></li><li data-type='method'><a href="SimplyEco.html#RemoveMoney">RemoveMoney</a></li><li data-type='method'><a href="SimplyEco.html#SellItem">SellItem</a></li><li data-type='method'><a href="SimplyEco.html#SetDaily">SetDaily</a></li><li data-type='method'><a href="SimplyEco.html#SetJob">SetJob</a></li><li data-type='method'><a href="SimplyEco.html#SetWeekly">SetWeekly</a></li><li data-type='method'><a href="SimplyEco.html#Transfer">Transfer</a></li><li data-type='method'><a href="SimplyEco.html#Weekly">Weekly</a></li><li data-type='method'><a href="SimplyEco.html#Withdraw">Withdraw</a></li><li data-type='method'><a href="SimplyEco.html#Work">Work</a></li></ul></li><li></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/Xx-Mohit-xX/simply-eco" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h2><a href="https://www.npmjs.com/package/simply-eco" target="_blank" class="menu-item" id="npm" >Npm Info</a></h2><h2><a href="https://discord.gg/NAaxz5PgNn" target="_blank" class="menu-item" id="server" >Support server</a></h2><h3>Classes</h3><ul><li><a href="SimplyEco%2520the%2520constructor.html">SimplyEco the constructor</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AddItem">AddItem</a></li><li><a href="global.html#AddMoney">AddMoney</a></li><li><a href="global.html#BuyItem">BuyItem</a></li><li><a href="global.html#Daily">Daily</a></li><li><a href="global.html#Deposit">Deposit</a></li><li><a href="global.html#GetBal">GetBal</a></li><li><a href="global.html#GetBankBal">GetBankBal</a></li><li><a href="global.html#GetInv">GetInv</a></li><li><a href="global.html#GetItem">GetItem</a></li><li><a href="global.html#GetProfile">GetProfile</a></li><li><a href="global.html#GetRich">GetRich</a></li><li><a href="global.html#GetShop">GetShop</a></li><li><a href="global.html#GetUser">GetUser</a></li><li><a href="global.html#ReassignJob">ReassignJob</a></li><li><a href="global.html#RemoveItem">RemoveItem</a></li><li><a href="global.html#RemoveJob">RemoveJob</a></li><li><a href="global.html#RemoveMoney">RemoveMoney</a></li><li><a href="global.html#SellItem">SellItem</a></li><li><a href="global.html#SetDaily">SetDaily</a></li><li><a href="global.html#SetJob">SetJob</a></li><li><a href="global.html#SetWeekly">SetWeekly</a></li><li><a href="global.html#SimplyEco">SimplyEco</a></li><li><a href="global.html#Transfer">Transfer</a></li><li><a href="global.html#Weekly">Weekly</a></li><li><a href="global.html#Withdraw">Withdraw</a></li><li><a href="global.html#Work">Work</a></li></ul>
 </nav>
 
 <div id="main">
@@ -59,11 +59,12 @@
             <pre class="prettyprint source linenums"><code>//importing the files
 const eco = require("./lib/eco");
 /**
-  * SimplyEco
-  * @class
-  * @param {string} token | Mongo URL string}
-  * @param {boolean} options.notify
-  * @returns {Economy Class}
+  * @name SimplyEco
+  * @description SimplyEco extender
+  * @param {string} token - Mongo URL string}
+  * @param {Object[]} options - the options for constructor
+	 * @param {boolean} options[].notify - notification toggle for simplyeco
+	 * @param {boolean} options[].global - global toggle for simplyeco
  */
 function SimplyEco(token, options = {}) {
     return new eco(token, options);
@@ -87,7 +88,7 @@ module.exports = SimplyEco;</code></pre>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Dec 24 2021 07:34:07 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Dec 24 2021 11:04:47 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
