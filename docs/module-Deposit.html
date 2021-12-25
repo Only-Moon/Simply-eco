@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>index.js - SimplyEco</title>
+    <title>Deposit - SimplyEco</title>
     
     <meta name="description" content="Simply Eco is a powerful module that allows you to create economy system in your bot with ease.:)" />
     
@@ -46,37 +46,296 @@
 
 <div id="main">
     
-    <h1 class="page-title">index.js</h1>
+    <h1 class="page-title">Deposit</h1>
     
 
     
 
 
 
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>//importing the files
-const eco = require("./lib/eco");
-/**
-  * @name SimplyEco
-  * @description SimplyEco extender
-  * @param {string} token - Mongo URL string}
-  * @param {Object[]} options - the options for constructor
-	 * @param {boolean} options[].notify - notification toggle for simplyeco
-	 * @param {boolean} options[].global - global toggle for simplyeco
- */
-function SimplyEco(token, options = {}) {
-    return new eco(token, options);
-}
-//add Options to it
-SimplyEco.eco = eco;
-SimplyEco.version = require("./package.json").version;
 
-//exporting this meme
-module.exports = SimplyEco;</code></pre>
-        </article>
-    </section>
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext"><p>Deposit money to an bank. GuildID is not needed for global use.</p></div>
+            
+
+            
+                
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_eco.js.html">lib/eco.js</a>, <a href="lib_eco.js.html#line1535">line 1535</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>await client.ecoDeposit({ GuildID: "881789379553656872", Amt: 10, UserID: "753974636508741673" })</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>returns NO_CASH_IN_WALLET or NOT_ENOUGH_CASH or bank and wallet balance</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+|
+
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="~amt"><span class="type-signature">(inner) </span>amt<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_eco.js.html">lib/eco.js</a>, <a href="lib_eco.js.html#line1585">line 1585</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>The amount to Deposit</p>
+</div>
+
+
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~amt"><span class="type-signature">(inner) </span>amt<span class="type-signature"></span></h4>
+
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_eco.js.html">lib/eco.js</a>, <a href="lib_eco.js.html#line1622">line 1622</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>The amount to Deposit</p>
+</div>
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

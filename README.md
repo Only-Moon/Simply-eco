@@ -48,7 +48,7 @@ client.eco.<Method>({<Options>}); //returns -> Promise ->
 # Options
 
 - **📌 notify** `(Boolean)` - Notifies when SimplyEco is connected
-- ** 🔮 global** `(Boolean)` - Multi guild toggle
+- **🔮 global** `(Boolean)` - Multi guild toggle
 
 
 

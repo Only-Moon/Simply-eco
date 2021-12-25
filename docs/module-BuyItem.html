@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>index.js - SimplyEco</title>
+    <title>BuyItem - SimplyEco</title>
     
     <meta name="description" content="Simply Eco is a powerful module that allows you to create economy system in your bot with ease.:)" />
     
@@ -46,37 +46,166 @@
 
 <div id="main">
     
-    <h1 class="page-title">index.js</h1>
+    <h1 class="page-title">BuyItem</h1>
     
 
     
 
 
 
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>//importing the files
-const eco = require("./lib/eco");
-/**
-  * @name SimplyEco
-  * @description SimplyEco extender
-  * @param {string} token - Mongo URL string}
-  * @param {Object[]} options - the options for constructor
-	 * @param {boolean} options[].notify - notification toggle for simplyeco
-	 * @param {boolean} options[].global - global toggle for simplyeco
- */
-function SimplyEco(token, options = {}) {
-    return new eco(token, options);
-}
-//add Options to it
-SimplyEco.eco = eco;
-SimplyEco.version = require("./package.json").version;
 
-//exporting this meme
-module.exports = SimplyEco;</code></pre>
-        </article>
-    </section>
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext"><p>Buy an item to a user. GuildID is not needed for global use.</p></div>
+            
+
+            
+                
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib_eco.js.html">lib/eco.js</a>, <a href="lib_eco.js.html#line517">line 517</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>await client.ecoBuyItem({ GuildID: "881789379553656872", Item: "very expensive pancakes" | "0", user: "753974636508741673" })</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>return ITEM_NOT_FOUND or NOT_ENOUGH_CASH or ALREADY_PURCHASED or array of item objects</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+|
+
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

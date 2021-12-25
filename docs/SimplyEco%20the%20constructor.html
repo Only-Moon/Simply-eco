@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/Xx-Mohit-xX/simply-eco" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h2><a href="https://www.npmjs.com/package/simply-eco" target="_blank" class="menu-item" id="npm" >Npm Info</a></h2><h2><a href="https://discord.gg/NAaxz5PgNn" target="_blank" class="menu-item" id="server" >Support server</a></h2><h3>Classes</h3><ul><li><a href="SimplyEco%2520the%2520constructor.html">SimplyEco the constructor</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AddItem">AddItem</a></li><li><a href="global.html#AddMoney">AddMoney</a></li><li><a href="global.html#BuyItem">BuyItem</a></li><li><a href="global.html#Daily">Daily</a></li><li><a href="global.html#Deposit">Deposit</a></li><li><a href="global.html#GetBal">GetBal</a></li><li><a href="global.html#GetBankBal">GetBankBal</a></li><li><a href="global.html#GetInv">GetInv</a></li><li><a href="global.html#GetItem">GetItem</a></li><li><a href="global.html#GetProfile">GetProfile</a></li><li><a href="global.html#GetRich">GetRich</a></li><li><a href="global.html#GetShop">GetShop</a></li><li><a href="global.html#GetUser">GetUser</a></li><li><a href="global.html#ReassignJob">ReassignJob</a></li><li><a href="global.html#RemoveItem">RemoveItem</a></li><li><a href="global.html#RemoveJob">RemoveJob</a></li><li><a href="global.html#RemoveMoney">RemoveMoney</a></li><li><a href="global.html#SellItem">SellItem</a></li><li><a href="global.html#SetDaily">SetDaily</a></li><li><a href="global.html#SetJob">SetJob</a></li><li><a href="global.html#SetWeekly">SetWeekly</a></li><li><a href="global.html#SimplyEco">SimplyEco</a></li><li><a href="global.html#Transfer">Transfer</a></li><li><a href="global.html#Weekly">Weekly</a></li><li><a href="global.html#Withdraw">Withdraw</a></li><li><a href="global.html#Work">Work</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://github.com/Xx-Mohit-xX/simply-eco" target="_blank" class="menu-item" id="repository" >Github repo</a></h2><h2><a href="https://www.npmjs.com/package/simply-eco" target="_blank" class="menu-item" id="npm" >Npm Info</a></h2><h2><a href="https://discord.gg/NAaxz5PgNn" target="_blank" class="menu-item" id="server" >Support server</a></h2><h3>Classes</h3><ul><li><a href="SimplyEco%2520the%2520constructor.html">SimplyEco the constructor</a></li></ul><h3>Modules</h3><ul><li><a href="module-AddItem.html">AddItem</a></li><li><a href="module-AddMoney.html">AddMoney</a></li><li><a href="module-BuyItem.html">BuyItem</a></li><li><a href="module-Daily.html">Daily</a></li><li><a href="module-Deposit.html">Deposit</a></li><li><a href="module-GetBal.html">GetBal</a></li><li><a href="module-GetBankBal.html">GetBankBal</a></li><li><a href="module-GetInv.html">GetInv</a></li><li><a href="module-GetItem.html">GetItem</a></li><li><a href="module-GetProfile.html">GetProfile</a></li><li><a href="module-GetRich.html">GetRich</a></li><li><a href="module-GetShop.html">GetShop</a></li><li><a href="module-GetUser.html">GetUser</a></li><li><a href="module-ReassignJob.html">ReassignJob</a></li><li><a href="module-RemoveItem.html">RemoveItem</a></li><li><a href="module-RemoveJob.html">RemoveJob</a></li><li><a href="module-RemoveMoney.html">RemoveMoney</a></li><li><a href="module-SellItem.html">SellItem</a></li><li><a href="module-SetDaily.html">SetDaily</a></li><li><a href="module-SetJob.html">SetJob</a></li><li><a href="module-SetWeekly.html">SetWeekly</a></li><li><a href="module-Transfer.html">Transfer</a></li><li><a href="module-Weekly.html">Weekly</a></li><li><a href="module-Withdraw.html">Withdraw</a></li><li><a href="module-Work.html">Work</a></li></ul><h3>Global</h3><ul><li><a href="global.html#SimplyEco">SimplyEco</a></li></ul>
 </nav>
 
 <div id="main">
@@ -62,6 +62,8 @@
         SimplyEco the constructor
         </h2>
         
+            <div class="class-description usertext"><p>constructs SimplyEco</p></div>
+        
     
 </header>
 
@@ -72,8 +74,10 @@
             
 
     
+    <h2>Constructor</h2>
+    
 
-    <h4 class="name" id="SimplyEco the constructor"><span class="type-signature"></span>new SimplyEco the constructor<span class="signature">(dbUrl, options, client)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="SimplyEco the constructor"><span class="type-signature"></span>new SimplyEco the constructor<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
@@ -85,7 +89,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="lib_eco.js.html">lib/eco.js</a>, <a href="lib_eco.js.html#line10">line 10</a>
+        <a href="lib_eco.js.html">lib/eco.js</a>, <a href="lib_eco.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -138,176 +142,10 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>new eco.eco(client, dbUrl, { global: true | false, notify: true | false })</code></pre>
+    <pre class="prettyprint"><code>const economy = require("simply-eco")
+client.eco = new economy.eco(client, dbUrl, { global: true | false, notify: true | false })</code></pre>
 
 
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>dbUrl</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the mongoose database url</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array.&lt;Object></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the options for constructor</p>
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>notify</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>notification toggle for simplyeco</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>global</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>global toggle for simplyeco</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>client</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Client</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the discord.js client</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -393,7 +231,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Fri Dec 24 2021 11:12:08 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Sat Dec 25 2021 08:42:50 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
