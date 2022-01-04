@@ -5,3 +5,4 @@ package-lock.json
 lib/items.jsi
 .npmignore
 dist/
+yarn.lock

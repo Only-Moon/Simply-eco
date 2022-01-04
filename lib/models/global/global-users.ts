@@ -12,7 +12,7 @@ export interface GlobalMemberDataInterface {
 	bank: number | null
 	lastUsedDaily: Date;
 	lastUsedWeekly: Date;
-	inventory: Item[];
+	inventory: Array<Item>;
 	Job: string | null;
 	salary: number | null;
 	lastUsedWork: Date;

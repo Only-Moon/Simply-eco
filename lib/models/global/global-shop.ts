@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 type Item = { Name: string, Price: number, Sell: number, id: 0 | number };
 export interface GlobalShopData {
 	Id: string | null;
-	shopItems: Item[];
+	shopItems: Array<Item>;
 	weeklyAmt: number | 10000;
 	dailyAmt: number | 2000;
 }

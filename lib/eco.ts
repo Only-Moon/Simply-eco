@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
-import guildUserData from '../models/nonGlobal/users';
-import guildData, { GuildDataInterface } from '../models/nonGlobal/guild';
-import globalShop, { GlobalShopData } from '../models/global/global-shop';
-import globalUserData from '../models/global/global-users';
+import guildUserData from './models/nonGlobal/users';
+import guildData, { GuildDataInterface } from './models/nonGlobal/guild';
+import globalShop, { GlobalShopData } from './models/global/global-shop';
+import globalUserData from './models/global/global-users';
 import { optionsInterface } from "../typings/index"
 import jobs from './data/jobs.js';
 import { Client } from 'discord.js';
