@@ -1,9 +1,9 @@
 {
   "name": "simply-eco",
-  "types": "./lib/typings/index.d.ts",
+  "types": "./typings/index.d.ts",
   "version": "1.0.0",
   "description": "A powerful module that allows you to create economy system in your bot with ease.",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",

@@ -1,13 +1,15 @@
 import { Client } from "discord.js";
-
+export interface optionsInterface {
+    notify?: boolean;
+    global?: boolean;
+}
 declare module "simply-eco" {
 
     export type wallet = number | null;
     export type bankWallet = number | null;
     export type weeklyAmt = string | 10000;
     export type job = { Job: string };
-
-    export type Item = { Name: string, Price: string, Sell: string, id: 0 | number };
+    export type Item = { Name: string, Price: number, Sell: number, id: 0 | number };
     export interface Options {
         GuildID?: string;
     }

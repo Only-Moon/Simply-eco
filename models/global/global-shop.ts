@@ -1,11 +1,16 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 /**
   * @type {mongoose.Schema<{ Id: string | null, shopItems: {Name: string, Price:string, Sell: string, id: 0}[]  | [], weeklyAmy: number | 10000, dailyAmt: number | 2000}>}
 */ 
-
-
-const GlobalShop = new mongoose.Schema({
+type Item = { Name: string, Price: number, Sell: number, id: 0 | number };
+export interface GlobalShopData {
+	Id: string | null;
+	shopItems: Item[];
+	weeklyAmt: number | 10000;
+	dailyAmt: number | 2000;
+}
+const GlobalShop = new mongoose.Schema<GlobalShopData>({
 	Id: {
 		type: String,
 		default: null
@@ -25,4 +30,4 @@ const GlobalShop = new mongoose.Schema({
 
 });
 
-module.exports = mongoose.model('GlobalShop', GlobalShop);
+export default mongoose.model<GlobalShopData>('GlobalShop', GlobalShop);
