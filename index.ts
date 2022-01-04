@@ -3,4 +3,4 @@ import SimplyEco from "./lib/eco";
 
 
 //exporting this package
-export default SimplyEco;
+export = SimplyEco;
