@@ -13,7 +13,7 @@
   "author": "Xx-Mohit-xX",
   "license": "GPL-3.0",
   "dependencies": {
-    "discord.js": "^13.5.0",
+    "discord.js": "^13.6.0",
     "docdash": "^1.2.0",
     "husky": "^7.0.4",
     "mongoose": "5.13.2"
@@ -42,9 +42,11 @@
     "url": "https://github.com/Xx-Mohit-xX/Simply-eco/issues"
   },
   "devDependencies": {
+    "@types/node": "^17.0.8",
     "jsdoc": "^3.6.7",
     "node": "^17.1.0",
     "prettier": "^2.5.0",
-    "pretty-quick": "^3.1.1"
+    "pretty-quick": "^3.1.1",
+    "typescript": "^4.5.4"
   }
 }
