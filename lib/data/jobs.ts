@@ -65,4 +65,4 @@ const jobs = [
 	}
 ];
 
-module.exports = jobs;
+export default jobs;

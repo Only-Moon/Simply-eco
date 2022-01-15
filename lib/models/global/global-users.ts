@@ -1,10 +1,24 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 /**
  * @type {mongoose.Schema<{ userId: string, Id: string, wallet: number, bank: number, dailyAmt: number, lastUsedDaily:  Date, lastUsedWekly: Date, inventory: ({Name: string, Price:string, Sell: string, id: 0})[], job: string, lastUsedWork: Date }>}
  */
 
-const GMemberData = new mongoose.Schema({
+ type Item = { Name: string, Price: number, Sell: number, id: 0 | number };
+
+export interface GlobalMemberDataInterface {
+	userID: string | null;
+	wallet: number | null
+	bank: number | null
+	lastUsedDaily: Date;
+	lastUsedWeekly: Date;
+	inventory: Array<Item>;
+	Job: string | null;
+	salary: number | null;
+	lastUsedWork: Date;
+}
+
+const GMemberData = new mongoose.Schema<GlobalMemberDataInterface>({
 	userID: {
 		type: String,
 		default: null
@@ -40,4 +54,4 @@ const GMemberData = new mongoose.Schema({
 	}
 });
 
-module.exports = mongoose.model('GlobalMemberData', GMemberData);
+export default mongoose.model<GlobalMemberDataInterface>('GlobalMemberData', GMemberData);

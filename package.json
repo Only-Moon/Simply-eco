@@ -1,21 +1,22 @@
 {
   "name": "simply-eco",
-  "types": "./lib/typings/index.d.ts",
+  "types": "./typings/index.d.ts",
   "version": "1.0.0",
   "description": "A powerful module that allows you to create economy system in your bot with ease.",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
+    "publish": "tsc && npm publish",
     "gen": "node_modules/.bin/jsdoc -c jsdoc.json"
   },
   "author": "Xx-Mohit-xX",
   "license": "GPL-3.0",
   "dependencies": {
-    "discord.js": "^13.3.1",
+    "discord.js": "^13.6.0",
     "docdash": "^1.2.0",
     "husky": "^7.0.4",
-    "mongoose": "^5.13.2"
+    "mongoose": "5.13.2"
   },
   "repository": {
     "type": "git",
@@ -41,9 +42,11 @@
     "url": "https://github.com/Xx-Mohit-xX/Simply-eco/issues"
   },
   "devDependencies": {
+    "@types/node": "^17.0.8",
     "jsdoc": "^3.6.7",
     "node": "^17.1.0",
     "prettier": "^2.5.0",
-    "pretty-quick": "^3.1.1"
+    "pretty-quick": "^3.1.1",
+    "typescript": "^4.5.4"
   }
 }
