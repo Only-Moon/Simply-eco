@@ -51,7 +51,7 @@ client.eco.<Method>({<Options>}); //returns -> Promise ->
 
 
 ## All Methods 
-- Methods: [LINK](https://simplyeco.js.org/SimplyEco.html)
+- Methods: [LINK](https://simplyeco.js.org/classes/export_.html)
 
 ## Features
 
