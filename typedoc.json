@@ -1,0 +1,5 @@
+{
+"entryPoints": ["index.ts"],
+"out": "docs",
+"cname": "simplyeco.js.org"
+}

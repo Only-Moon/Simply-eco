@@ -1603,6 +1603,9 @@ class SimplyEco {
 	}
 }
 
+/**
+* @private
+*/
 function _msToTime(duration) {
 	const ms = Math.floor((duration % 1000) / 100),
 		seconds = Math.floor((duration / 1000) % 60),
@@ -1620,6 +1623,9 @@ function _msToTime(duration) {
 	);
 }
 
+/**
+* @private
+*/
 const _checkItem = (item, testableItemIdOrName) => {
 	return item.Name == testableItemIdOrName || item.id == testableItemIdOrName;
 };

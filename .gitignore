@@ -2,7 +2,6 @@
 node_modules
 package-lock.json
 .npmignore
-lib/items.jsi
 .npmignore
 dist/
 yarn.lock
