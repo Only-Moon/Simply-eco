@@ -24,7 +24,7 @@ class SimplyEco {
 		if (!dbUrl) throw new TypeError('dbUrl was not provided!');
 		this.Client = client;
 		this.options = options;
-		this.version = require("./package.json").version
+		this.version = require("../package.json").version
 		mongoose.connect(
 			dbUrl,
 			{
