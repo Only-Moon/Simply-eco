@@ -19,10 +19,10 @@ npm install simply-eco
 
 ```js
 const client = <your Discord client>
-//Import package
 const economy = require("simply-eco");
+
 //create new economy() Class
-client.eco = new economy.eco(client , "YOUR MONGODB URI")
+client.eco = new economy(client , "YOUR MONGODB URI")
 
 client.eco.<Method>({<Options>}); //return -> Promise ->
 ```
@@ -31,11 +31,10 @@ client.eco.<Method>({<Options>}); //return -> Promise ->
 
 ```js
 const client = <your Discord Client>
-//Import package
 const economy = require("simply-eco");
 //create new economy() Class
 
-client.eco = new economy.eco(client, 'YOUR MONGODB URI', {
+client.eco = new economy(client, 'YOUR MONGODB URI', {
 notify: false, 
 global: true
 });
@@ -45,8 +44,8 @@ client.eco.<Method>({<Options>}); //returns -> Promise ->
 ```
 # Options
 
-- **📌 notify** `(Boolean)` - Notifies when SimplyEco is connected
-- **🔮 global** `(Boolean)` - Multi guild toggle
+- **📌 notify** `(Boolean)` - Notifies in console that SimplyEco is connected to db
+- **🔮 global** `(Boolean)` - Multi guild/Global toggle
 
 
 
@@ -60,7 +59,7 @@ client.eco.<Method>({<Options>}); //returns -> Promise ->
 - Works with Discord.js v12 and v13
 - Works with both Slash and Prefix Commands
 - More than 25 functions
-- Multi - Guild Support
+- Multi-Guild/Global Support
 - Great Support
 - Fully Customizable
 
@@ -72,7 +71,8 @@ client.eco.<Method>({<Options>}); //returns -> Promise ->
 
 ## Credits
 
-- Final Form by: [@Xx-Mohit-xX](https://github.com/Xx-Mohit-xX)
-- Base by: [@Yash094](https://github.com/Yash094)
+- Current Owner: [@Xx-Mohit-xX](https://github.com/Xx-Mohit-xX)
+- Typescript Upgrade: [@RaZeSloth](https://github.com/RaZeSloth)
+- Originally From: [@Yash094](https://github.com/Yash094)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E057WWV)
