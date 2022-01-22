@@ -20,11 +20,9 @@ class SimplyEco {
 	mongoClient: typeof mongoose;
 	constructor(client: Client, dbUrl: string, options: optionsInterface = {}) {
 		if (!client) throw new TypeError("No client provided.")
-		if (!(client instanceof Client)) throw new TypeError("No right discord.js client provided")
 		if (!dbUrl) throw new TypeError('dbUrl was not provided!');
 		this.Client = client;
 		this.options = options;
-		this.version = require("../package.json").version
 		mongoose.connect(
 			dbUrl,
 			{

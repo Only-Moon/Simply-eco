@@ -1,12 +1,12 @@
 {
   "name": "simply-eco",
   "types": "./typings/index.d.ts",
-  "version": "1.0.26",
+  "version": "1.0.28",
   "description": "A powerful module that allows you to create economy system in your bot with ease.",
   "main": "./dist/index.js",
   "scripts": {
     "test": "ERROR",
-    "pub": "tsc && npm publish",
+    "pub": "tsc && npm update",
     "gen": "npx typedoc"
   },
   "author": "Xx-Mohit-xX",
@@ -40,12 +40,12 @@
     "url": "https://github.com/Xx-Mohit-xX/Simply-eco/issues"
   },
   "devDependencies": {
-    "@types/node": "^17.0.8",
+    "@types/node": "^17.0.10",
     "node": "^17.1.0",
     "prettier": "^2.5.0",
     "pretty-quick": "^3.1.1",
-    "typedoc": "^0.22.10",
+    "typedoc": "^0.22.11",
     "typedoc-plugin-cname": "^1.0.1",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.5"
   }
 }
