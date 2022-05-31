@@ -567,7 +567,7 @@ class SimplyEco {
 				return UserData.wallet;
 			}
 		} else {
-			if (!GuildID) throw new TypeError('A Item ID must be specified');
+			if (!UserID) throw new TypeError('A User ID must be specified');
 
 			let UserData = await globalUserData.findOne({
 				userID: UserID,
@@ -926,7 +926,8 @@ class SimplyEco {
 		// Required Parameters
 		if (!UserID) throw new TypeError('A user ID must be specified');
 		if (!Amt) throw new TypeError('An amount of money must be specified.');
-
+		if (!NaN(Amt)) throw new TypeError('Amount of money must be in number.');
+    
 		if (!this.options?.global) {
 			if (!GuildID) throw new TypeError('A guild id must be specified.');
 			//Find Data In DB
@@ -986,6 +987,7 @@ class SimplyEco {
 		// Required Parameters
 		if (!UserID) throw new TypeError('A user ID must be specified');
 		if (!Amt) throw new TypeError('An amount of money must be specified.');
+		if (!NaN(Amt)) throw new TypeError('Amount of money must be in number.');    
 
 		if (!this.options?.global) {
 			if (!GuildID) throw new TypeError('A guild id must be specified.');
